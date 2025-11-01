@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.library</groupId>
-  <artifactId>new_testsoft2</artifactId>
+  <artifactId>softt</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>new_testsoft2</name>
+  <name>softt</name>
   <url>http://maven.apache.org</url>
 
   <properties>
