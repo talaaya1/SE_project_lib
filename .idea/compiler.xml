@@ -9,8 +9,5 @@
         <module name="new_testsoft2" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="new_testsoft2" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
