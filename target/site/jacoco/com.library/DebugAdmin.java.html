@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DebugAdmin.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">new_testsoft2</a> &gt; <a href="index.source.html" class="el_package">com.library</a> &gt; <span class="el_source">DebugAdmin.java</span></div><h1>DebugAdmin.java</h1><pre class="source lang-java linenums">package com.library;
+
+import java.io.*;
+import java.util.Scanner;
+
+<span class="nc" id="L6">public class DebugAdmin {</span>
+    private static final String ADMIN_FILE = &quot;admins.txt&quot;;
+
+    public static void main(String[] args) {
+<span class="nc" id="L10">        Scanner scanner = new Scanner(System.in);</span>
+
+<span class="nc" id="L12">        System.out.println(&quot;=== إضافة مدير جديد ===\n&quot;);</span>
+
+        // 1. أخذ البيانات من المستخدم
+<span class="nc" id="L15">        System.out.print(&quot;أدخل اسم المدير: &quot;);</span>
+<span class="nc" id="L16">        String name = scanner.nextLine();</span>
+
+<span class="nc" id="L18">        System.out.print(&quot;أدخل الإيميل: &quot;);</span>
+<span class="nc" id="L19">        String email = scanner.nextLine();</span>
+
+<span class="nc" id="L21">        System.out.print(&quot;أدخل كلمة المرور: &quot;);</span>
+<span class="nc" id="L22">        String password = scanner.nextLine();</span>
+
+        // 2. تشفير كلمة المرور
+<span class="nc" id="L25">        String hashedPassword = PasswordHasher.hashPassword(password);</span>
+
+        // 3. عرض البيانات المدخلة
+<span class="nc" id="L28">        System.out.println(&quot;\n=== البيانات المدخلة ===&quot;);</span>
+<span class="nc" id="L29">        System.out.println(&quot;الاسم: &quot; + name);</span>
+<span class="nc" id="L30">        System.out.println(&quot;الإيميل: &quot; + email);</span>
+<span class="nc" id="L31">        System.out.println(&quot;كلمة المرور الأصلية: &quot; + password);</span>
+<span class="nc" id="L32">        System.out.println(&quot;كلمة المرور المشفرة: &quot; + hashedPassword);</span>
+
+        // 4. حفظ البيانات في الملف
+<span class="nc" id="L35">        saveAdminToFile(name, email, hashedPassword);</span>
+
+        // 5. التأكيد
+<span class="nc" id="L38">        System.out.println(&quot;\n✅ تم حفظ البيانات بنجاح في ملف: &quot; + ADMIN_FILE);</span>
+
+<span class="nc" id="L40">        scanner.close();</span>
+<span class="nc" id="L41">    }</span>
+
+    public static void saveAdminToFile(String name, String email, String hashedPassword) {
+<span class="fc" id="L44">        try (PrintWriter writer = new PrintWriter(new FileWriter(ADMIN_FILE, true))) {</span>
+            // تنسيق البيانات: اسم|إيميل|كلمة مرور مشفرة
+<span class="fc" id="L46">            writer.println(name + &quot;|&quot; + email + &quot;|&quot; + hashedPassword);</span>
+<span class="fc" id="L47">            writer.flush();</span>
+<span class="fc" id="L48">            System.out.println(&quot;تم تخزين البيانات بالتنسيق: &quot; + name + &quot;,&quot; + email + &quot;,&quot; + hashedPassword);</span>
+<span class="nc" id="L49">        } catch (IOException e) {</span>
+<span class="nc" id="L50">            System.err.println(&quot;❌ خطأ في حفظ البيانات: &quot; + e.getMessage());</span>
+<span class="nc" id="L51">            e.printStackTrace();</span>
+<span class="fc" id="L52">        }</span>
+<span class="fc" id="L53">    }</span>
+
+    // يجب أن يكون لديك كلاس PasswordHasher
+<span class="nc" id="L56">    static class PasswordHasher {</span>
+        public static String hashPassword(String password) {
+            try {
+<span class="fc" id="L59">                java.security.MessageDigest md = java.security.MessageDigest.getInstance(&quot;MD5&quot;);</span>
+<span class="fc" id="L60">                byte[] array = md.digest(password.getBytes());</span>
+<span class="fc" id="L61">                StringBuilder sb = new StringBuilder();</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">                for (byte b : array) {</span>
+<span class="fc" id="L63">                    sb.append(String.format(&quot;%02x&quot;, b));</span>
+                }
+<span class="fc" id="L65">                return sb.toString();</span>
+<span class="nc" id="L66">            } catch (java.security.NoSuchAlgorithmException e) {</span>
+<span class="nc" id="L67">                return null;</span>
+            }
+        }
+
+        public static boolean verifyPassword(String inputPassword, String storedHash) {
+<span class="fc" id="L72">            String hashedInput = hashPassword(inputPassword);</span>
+<span class="pc bpc" id="L73" title="1 of 4 branches missed.">            return hashedInput != null &amp;&amp; hashedInput.equals(storedHash);</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Book.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">new_testsoft2</a> &gt; <a href="index.source.html" class="el_package">com.library</a> &gt; <span class="el_source">Book.java</span></div><h1>Book.java</h1><pre class="source lang-java linenums">package com.library;
+
+import java.time.LocalDate;
+
+public class Book extends Media {
+    private String author;
+    private String isbn;
+
+    // ------------ Constructors ------------
+    public Book(String title, String author, String isbn) {
+<span class="nc" id="L11">        super(title);</span>
+<span class="nc" id="L12">        this.author = author;</span>
+<span class="nc" id="L13">        this.isbn = isbn;</span>
+<span class="nc" id="L14">    }</span>
+
+    public Book(String title, String author, String isbn, int availableCopies) {
+<span class="fc" id="L17">        super(title, availableCopies); // نستخدم availableCopies مباشرة</span>
+<span class="fc" id="L18">        this.author = author;</span>
+<span class="fc" id="L19">        this.isbn = isbn;</span>
+<span class="fc" id="L20">    }</span>
+
+    // ------------ Getters ------------
+<span class="fc" id="L23">    public String getAuthor() { return author; }</span>
+<span class="fc" id="L24">    public String getIsbn() { return isbn; }</span>
+
+    public String getStatus() {
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        return availableCopies &gt; 0 ? &quot;Available&quot; : &quot;Not Available&quot;;</span>
+    }
+
+    // ------------ Media overrides ------------
+    @Override
+    public String getType() {
+<span class="fc" id="L33">        return &quot;Book&quot;;</span>
+    }
+
+    @Override
+    public int getBorrowDays() {
+<span class="fc" id="L38">        return 28;</span>
+    }
+
+    // ===== Borrow &amp; Return Methods =====
+    @Override
+    public boolean borrow(String userEmail) {
+<span class="fc bfc" id="L44" title="All 2 branches covered.">        if (availableCopies &lt;= 0) return false;</span>
+<span class="fc" id="L45">        availableCopies--;</span>
+<span class="fc" id="L46">        borrowed = true; // أي نسخة مستعارة تجعل الكتاب &quot;مستعار&quot;</span>
+<span class="fc" id="L47">        borrowerEmail = userEmail;</span>
+<span class="fc" id="L48">        borrowDate = LocalDate.now();</span>
+<span class="fc" id="L49">        dueDate = LocalDate.now().plusDays(getBorrowDays());</span>
+<span class="fc" id="L50">        return true;</span>
+    }
+
+    @Override
+    public void returned() {
+<span class="fc" id="L55">        availableCopies++; // زيادة النسخ عند الإرجاع</span>
+<span class="fc" id="L56">        borrowed = false;</span>
+<span class="fc" id="L57">        borrowerEmail = null;</span>
+<span class="fc" id="L58">        borrowDate = null;</span>
+<span class="fc" id="L59">        dueDate = null;</span>
+<span class="fc" id="L60">    }</span>
+
+    // ------------ toString ------------
+    @Override
+    public String toString() {
+<span class="fc" id="L65">        return &quot;Book: &quot; + title + &quot; by &quot; + author + &quot; (ISBN: &quot; + isbn + &quot;) - &quot; +</span>
+                availableCopies + &quot; copies &quot; +
+<span class="pc bpc" id="L67" title="1 of 2 branches missed.">                (borrowed ? &quot;(Borrowed by &quot; + borrowerEmail + &quot;, due: &quot; + dueDate + &quot;)&quot; : &quot;(Available)&quot;);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

@@ -1,0 +1,984 @@
+2025-12-06T00:54:49.492988600 | tala.muammar@gmail.com | 🎉 Welcome to Library System, tete! | SUCCESS
+2025-12-06T00:58:14.199128200 | tala.muammar@gmail.com | 📚 Borrowing Confirmation: 21 | SUCCESS
+2025-12-06T01:04:20.549809900 | tala.muammar@gmail.com | 🎉 Welcome to Library System, talaa! | SUCCESS
+2025-12-06T01:05:17.667274400 | tala.muammar@gmail.com | 📚 Borrowing Confirmation: 21 | SUCCESS
+2025-12-06T01:10:31.755124800 | tala.muammar@gmail.com | ✅ Payment Received: 40.0 NIS | SUCCESS
+2025-12-06T01:11:18.674027500 | tala.muammar@gmail.com | 📚 Borrowing Confirmation: mus | SUCCESS
+2025-12-06T01:19:27.176000700 | tala.muammar@gmail.com | ✅ Payment Received: 40.0 NIS | SUCCESS
+2025-12-06T01:19:57.255788 | tala.muammar@gmail.com | 📚 Borrowing Confirmation: pic | SUCCESS
+2025-12-06T01:21:18.308327900 | tala.muammar@gmail.com | 📚 Borrowing Confirmation: pic | SUCCESS
+2025-12-06T14:51:17.386305300 | tala.muammar@gmail.com | ✅ Payment Received: 60.0 NIS | SUCCESS
+2025-12-06T14:53:00.841328200 | tala.muammar@gmail.com | 📚 Borrowing Confirmation: pic | SUCCESS
+2025-12-06T14:57:09.320071700 | tala.muammar@gmail.com | ✅ Payment Received: 60.0 NIS | SUCCESS
+2025-12-06T15:34:25.688208900 | tala.muammar@gmail.com | ✅ Payment Received: 30.0 NIS | SUCCESS
+2025-12-06T15:37:28.202444100 | tala.muammar@gmail.com | ✅ Payment Received: 30.0 NIS | SUCCESS
+2025-12-06T15:41:09.883288900 | tala@gmail.com | ✅ Payment Received: 20.0 NIS | SUCCESS
+2025-12-06T15:42:21.320901300 | tala@gmail.com | 📚 Borrowing Confirmation: 1984 | SUCCESS
+2025-12-06T17:20:33.464211300 | lolo@gmail.com | 🎉 Welcome to Library System, lolo! | SUCCESS
+2025-12-07T14:46:46.345260400 | aya@gmail.com | 🎉 Welcome to Library System, aya! | SUCCESS
+2025-12-07T14:48:42.587306300 | aya@gmail.com | 📚 Borrowing Confirmation: mus | SUCCESS
+2025-12-07T14:50:56.222871300 | aya@gmail.com | ✅ Payment Received: 30.0 NIS | SUCCESS
+2025-12-07T14:51:44.824984400 | aya@gmail.com | ✅ Payment Received: 30.0 NIS | SUCCESS
+2025-12-07T15:02:02.481532400 | aya@gmail.com | 📚 Borrowing Confirmation: CD One | SUCCESS
+2025-12-07T15:02:49.842841 | aya@gmail.com | ✅ Payment Received: 20.0 NIS | SUCCESS
+2025-12-07T15:17:31.640340700 | aya@gmail.com | 📚 Borrowing Confirmation: os | SUCCESS
+2025-12-07T15:20:44.318615 | aya@gmail.com | 📚 Borrowing Confirmation: mus | SUCCESS
+2025-12-07T15:21:39.740811500 | aya@gmail.com | 📚 Borrowing Confirmation: os | SUCCESS
+2025-12-07T15:37:10.690459400 | aya@gmail.com | 📚 Borrowing Confirmation: pic | SUCCESS
+2025-12-07T15:45:03.484551500 | aya@gmail.com | 📚 Borrowing Confirmation: os | SUCCESS
+2025-12-07T15:52:23.577071400 | aya@gmail.com | 📚 Borrowing Confirmation: os | SUCCESS
+2025-12-07T16:58:39.454839200 | aya@gmail.com | 📚 Borrowing Confirmation: os | SUCCESS
+2025-12-07T17:04:03.214806600 | aya@gmail.com | 📚 Borrowing Confirmation: os | SUCCESS
+2025-12-07T17:14:35.485964100 | aya@gmail.com | 📚 Borrowing Confirmation: pic | SUCCESS
+2025-12-07T17:16:47.748501300 | aya@gmail.com | 📚 Borrowing Confirmation: os | SUCCESS
+2025-12-07T17:20:16.979896200 | aya@gmail.com | 📚 Borrowing Confirmation: pic | SUCCESS
+2025-12-07T17:21:26.546484400 | aya@gmail.com | ✅ Payment Received: 10.0 NIS | SUCCESS
+2025-12-07T17:21:33.199876200 | aya@gmail.com | 📚 Borrowing Confirmation: mus | SUCCESS
+2025-12-07T17:27:22.187639 | aya@gmail.com | 📚 Borrowing Confirmation: pic | SUCCESS
+2025-12-07T17:28:17.946434200 | aya@gmail.com | 📚 Borrowing Confirmation: pic | SUCCESS
+2025-12-07T17:36:36.996406 | aya@gmail.com | 📚 Borrowing Confirmation: pic | SUCCESS
+2025-12-07T17:37:55.375095600 | aya@gmail.com | 📚 Borrowing Confirmation: mus | SUCCESS
+2025-12-07T20:36:56.889439900 | tala.muammar@gmail.com | 🎉 Welcome to Library System, talaa! | SUCCESS
+2025-12-07T20:41:03.537439700 | tala.muammar@gmail.com | 📚 Borrowing Confirmation: os | SUCCESS
+2025-12-07T20:43:33.824644400 | tala.muammar@gmail.com | ✅ Payment Received: 5.0 NIS | SUCCESS
+2025-12-09T00:10:44.843578300 | lena@gmail.com | 🎉 Welcome to Library System, lena! | SUCCESS
+2025-12-09T00:34:13.890095400 | tala.muammar@gmail.com | ✅ Payment Received: 10.0 NIS | SUCCESS
+2025-12-09T00:34:48.638758100 | tala.muammar@gmail.com | 📚 Borrowing Confirmation: os | SUCCESS
+2025-12-09T00:48:03.265227700 | tala.muammar@gmail.com | 📚 Library Overdue Items Reminder | SUCCESS
+2025-12-09T01:25:10.712034700 | jana@gmail.com | 🎉 Welcome to Library System, jana! | SUCCESS
+2025-12-11T02:19:11.270459500 | lena@gmail.com | 🎉 Welcome to Library System, lena! | SUCCESS
+2025-12-11T02:24:29.659911400 | lena@gmail.com | 🎉 Welcome to Library System, lena! | SUCCESS
+2025-12-11T02:39:40.929478800 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ef95e1sm3801065e9.9 - gsmtp
+
+2025-12-11T02:40:13.302808400 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d70b43sm1298025e9.1 - gsmtp
+
+2025-12-11T02:40:30.406672800 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f742a4sm3247545e9.10 - gsmtp
+
+2025-12-11T02:40:59.536170400 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d9a174sm4858845e9.3 - gsmtp
+
+2025-12-11T02:41:39.231512300 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89da5f04sm1251455e9.9 - gsmtp
+
+2025-12-11T02:41:58.989705 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a941sm2040299f8f.34 - gsmtp
+
+2025-12-11T02:42:18.709084200 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b20dsm2086484f8f.38 - gsmtp
+
+2025-12-11T02:42:58.119157200 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d9c8acsm4858685e9.1 - gsmtp
+
+2025-12-11T02:43:32.033093700 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f0e42asm3833045e9.14 - gsmtp
+
+2025-12-11T02:44:11.246878200 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d9a174sm4964655e9.3 - gsmtp
+
+2025-12-11T02:44:30.899545 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66797sm2168152f8f.2 - gsmtp
+
+2025-12-11T02:44:50.662024 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a6fd62sm2321575f8f.10 - gsmtp
+
+2025-12-11T02:45:29.915615200 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ef9768sm4302425e9.11 - gsmtp
+
+2025-12-11T02:49:36.915625700 | lena@gmail.com | 🎉 Welcome to Library System, lena! | SUCCESS
+2025-12-11T13:53:18.788225600 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-6498210fd0csm2273784a12.25 - gsmtp
+
+2025-12-11T13:53:21.140538600 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa51756esm251248066b.44 - gsmtp
+
+2025-12-11T13:53:22.349000600 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-6498210fcf6sm2267864a12.27 - gsmtp
+
+2025-12-11T13:53:23.493190100 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa2e70c2sm246490766b.15 - gsmtp
+
+2025-12-11T13:53:30.150475 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-6498210fd44sm2247344a12.26 - gsmtp
+
+2025-12-11T13:55:04.875070200 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa29eb76sm251960066b.12 - gsmtp
+
+2025-12-11T13:55:07.139824900 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa5d2680sm246497966b.70 - gsmtp
+
+2025-12-11T13:55:08.170516 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa2e6ed3sm258951466b.23 - gsmtp
+
+2025-12-11T13:55:09.150630700 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-6498222b01csm2267452a12.35 - gsmtp
+
+2025-12-11T13:55:11.306853900 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa29bea0sm254571466b.8 - gsmtp
+
+2025-12-11T13:57:07.767714300 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-649820516desm2322830a12.14 - gsmtp
+
+2025-12-11T13:57:10.303339700 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa570167sm245590766b.57 - gsmtp
+
+2025-12-11T13:57:13.536424100 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-649821316e4sm2347084a12.31 - gsmtp
+
+2025-12-11T13:57:15.041543500 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-649820516d3sm2344982a12.9 - gsmtp
+
+2025-12-11T13:57:17.589574400 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa2e6edesm257092266b.18 - gsmtp
+
+2025-12-11T14:39:19.502534800 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa2ea564sm258091266b.26 - gsmtp
+
+2025-12-11T14:39:21.632899 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-64982040c32sm2400770a12.4 - gsmtp
+
+2025-12-11T14:39:22.745614100 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa3456casm257078666b.30 - gsmtp
+
+2025-12-11T14:39:23.803306700 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa29e060sm269113266b.2 - gsmtp
+
+2025-12-11T14:39:25.732284900 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa56a7f9sm253608666b.51 - gsmtp
+
+2025-12-11T14:41:09.727338200 |  | ✅ Payment Received: 0.0 NIS | FAILED: Illegal address
+2025-12-11T14:41:10.929735800 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-6498210fcf6sm2372295a12.27 - gsmtp
+
+2025-12-11T14:41:10.933745 |  |  | FAILED: Illegal address
+2025-12-11T14:41:13.330413 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa29e079sm277797366b.3 - gsmtp
+
+2025-12-11T14:41:14.699285800 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa29eb3csm262763466b.13 - gsmtp
+
+2025-12-11T14:41:14.705279300 |  | 📚 Borrowing Confirmation: Java 101 | FAILED: Illegal address
+2025-12-11T14:41:15.726437700 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa5c9d22sm267552866b.61 - gsmtp
+
+2025-12-11T14:41:15.733423900 |  | 🎉 Welcome to Library System, ! | FAILED: Illegal address
+2025-12-11T14:41:16.795895400 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa29bea0sm265544166b.8 - gsmtp
+
+2025-12-11T14:42:41.968758 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-6498210fceasm2339497a12.24 - gsmtp
+
+2025-12-11T14:42:41.974805800 |  | ✅ Payment Received: 0.0 NIS | FAILED: Illegal address
+2025-12-11T14:42:44.048302 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa5c8546sm262269966b.65 - gsmtp
+
+2025-12-11T14:42:44.052308200 |  | 📚 Borrowing Confirmation: Java 101 | FAILED: Illegal address
+2025-12-11T14:42:44.975454700 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-64982131ed7sm2443910a12.32 - gsmtp
+
+2025-12-11T14:42:44.982449 |  | 🎉 Welcome to Library System, ! | FAILED: Illegal address
+2025-12-11T14:42:46.031836900 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa56c15dsm259600866b.50 - gsmtp
+
+2025-12-11T14:42:46.037820800 |  | 📚 Library Overdue Items Reminder | FAILED: Illegal address
+2025-12-11T14:42:48.041760 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa5191efsm261262966b.40 - gsmtp
+
+2025-12-11T14:42:48.046746100 |  |  | FAILED: Illegal address
+2025-12-11T14:43:56.665824600 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa5191efsm261514066b.40 - gsmtp
+
+2025-12-11T14:43:56.673779300 |  | ✅ Payment Received: 0.0 NIS | FAILED: Illegal address
+2025-12-11T14:43:59.836676 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-64982227ba1sm2396861a12.33 - gsmtp
+
+2025-12-11T14:43:59.840758700 |  | 📚 Borrowing Confirmation: Java 101 | FAILED: Illegal address
+2025-12-11T14:44:00.762042600 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa5cf210sm263981066b.60 - gsmtp
+
+2025-12-11T14:44:00.770111300 |  | 🎉 Welcome to Library System, ! | FAILED: Illegal address
+2025-12-11T14:44:01.682013900 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa5c8546sm262555866b.65 - gsmtp
+
+2025-12-11T14:44:01.686089600 |  | 📚 Library Overdue Items Reminder | FAILED: Illegal address
+2025-12-11T14:44:03.846059700 | user@test.com | Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa29eb69sm270164466b.6 - gsmtp
+
+2025-12-11T14:44:03.850150300 |  |  | FAILED: Illegal address
+2025-12-11T14:48:08.382822200 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa57190dsm264951866b.49 - gsmtp
+
+2025-12-11T14:48:08.386623600 |  | ✅ Payment Received: 0.0 NIS | FAILED: Illegal address
+2025-12-11T14:48:10.726411900 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-649821316e4sm2468247a12.31 - gsmtp
+
+2025-12-11T14:48:10.736301400 |  | 📚 Borrowing Confirmation: Java 101 | FAILED: Illegal address
+2025-12-11T14:48:11.830844100 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-649820f785csm2459590a12.21 - gsmtp
+
+2025-12-11T14:48:11.835039400 |  | 🎉 Welcome to Library System, ! | FAILED: Illegal address
+2025-12-11T14:48:12.788526600 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa5d0b0dsm266415366b.67 - gsmtp
+
+2025-12-11T14:48:12.788526600 |  | 📚 Library Overdue Items Reminder | FAILED: Illegal address
+2025-12-11T14:48:14.921324200 | user@test.com | Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa57190dsm264975666b.49 - gsmtp
+
+2025-12-11T14:48:14.921324200 |  |  | FAILED: Illegal address
+2025-12-11T15:00:07.662201200 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1eb60sm13436395e9.20 - gsmtp
+
+2025-12-11T15:00:07.679890500 |  | ✅ Payment Received: 0.0 NIS | FAILED: Illegal address
+2025-12-11T15:00:46.830596800 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d70ac4sm13049135e9.2 - gsmtp
+
+2025-12-11T15:00:46.833155600 |  | 📚 Borrowing Confirmation: Java 101 | FAILED: Illegal address
+2025-12-11T15:01:06.345929300 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e838sm46954825e9.2 - gsmtp
+
+2025-12-11T15:01:06.348991900 |  | 🎉 Welcome to Library System, ! | FAILED: Illegal address
+2025-12-11T15:01:25.881305800 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f3c747sm33221135e9.8 - gsmtp
+
+2025-12-11T15:01:25.891859 |  | 📚 Library Overdue Items Reminder | FAILED: Illegal address
+2025-12-11T15:02:04.923319600 | user@test.com | Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a665e3sm5624480f8f.6 - gsmtp
+
+2025-12-11T15:02:04.925304300 |  |  | FAILED: Illegal address
+2025-12-11T15:04:13.863026400 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a9efsm5924900f8f.33 - gsmtp
+
+2025-12-11T15:04:53.017106900 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f036a9sm36200815e9.12 - gsmtp
+
+2025-12-11T15:05:13.557739100 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b6bfsm5439680f8f.43 - gsmtp
+
+2025-12-11T15:05:33.196283200 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a8be549d0sm21905325e9.1 - gsmtp
+
+2025-12-11T15:06:12.362017500 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a9b9sm5970640f8f.35 - gsmtp
+
+2025-12-11T15:07:08.449271600 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85fcesm6057989f8f.25 - gsmtp
+
+2025-12-11T15:07:47.590924500 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d9c8acsm35778465e9.1 - gsmtp
+
+2025-12-11T15:08:07.137936700 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a702a1sm6217734f8f.13 - gsmtp
+
+2025-12-11T15:08:26.681305200 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89da3a7dsm35835235e9.5 - gsmtp
+
+2025-12-11T15:09:05.784310200 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a8be549d0sm22114775e9.1 - gsmtp
+
+2025-12-11T15:17:19.107672200 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a9efsm5994935f8f.33 - gsmtp
+
+2025-12-11T15:17:58.633846400 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f35a31sm34861595e9.5 - gsmtp
+
+2025-12-11T15:18:18.362277100 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a941sm5677682f8f.34 - gsmtp
+
+2025-12-11T15:18:38.063167 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d1149dsm15870625e9.0 - gsmtp
+
+2025-12-11T15:19:17.520634900 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a950sm6291198f8f.32 - gsmtp
+
+2025-12-11T15:22:55.068934 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1eb60sm13824785e9.20 - gsmtp
+
+2025-12-11T15:23:34.201092700 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ed3986sm13984925e9.5 - gsmtp
+
+2025-12-11T15:23:53.781147100 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f35a31sm35105975e9.5 - gsmtp
+
+2025-12-11T15:24:13.343412300 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66614sm5858636f8f.5 - gsmtp
+
+2025-12-11T15:24:52.497446900 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89da3a7dsm36890165e9.5 - gsmtp
+
+2025-12-11T15:28:55.562113400 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66b97sm5852970f8f.7 - gsmtp
+
+2025-12-11T15:29:34.703742400 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b20dsm5884376f8f.38 - gsmtp
+
+2025-12-11T15:29:54.252169900 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f2a2fesm34719835e9.4 - gsmtp
+
+2025-12-11T15:30:13.836552500 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ef954asm36916845e9.10 - gsmtp
+
+2025-12-11T15:30:53.029715300 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b20dsm5889323f8f.38 - gsmtp
+
+2025-12-11T15:38:35.181290200 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a950sm6398880f8f.32 - gsmtp
+
+2025-12-11T15:38:38.630065800 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a741c9sm6170474f8f.19 - gsmtp
+
+2025-12-11T15:38:41.503852200 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f0e42asm35297655e9.14 - gsmtp
+
+2025-12-11T15:38:42.769218800 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d836c4sm14438045e9.1 - gsmtp
+
+2025-12-11T15:38:45.295316400 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85f81sm6478977f8f.21 - gsmtp
+
+2025-12-11T15:45:10.640584900 | user@test.com | ? Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa2ebaebsm282194366b.21 - gsmtp
+
+2025-12-11T15:45:12.992681100 | user@test.com | ? Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa29eb3csm277307466b.13 - gsmtp
+
+2025-12-11T15:45:14.159079300 | user@test.com | ? Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa5142efsm273734066b.38 - gsmtp
+
+2025-12-11T15:45:15.122310500 | user@test.com | ? Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa2ea57csm275623966b.22 - gsmtp
+
+2025-12-11T15:45:17.222711100 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa29f51esm276857066b.14 - gsmtp
+
+2025-12-11T15:49:08.592872800 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa5c8546sm277702966b.65 - gsmtp
+
+2025-12-11T15:49:10.792373700 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa5191efsm276526266b.40 - gsmtp
+
+2025-12-11T15:49:11.805257600 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa566b24sm276101766b.47 - gsmtp
+
+2025-12-11T15:49:12.961444300 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa51757asm274883566b.45 - gsmtp
+
+2025-12-11T15:49:14.971586300 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-b7cfa56c1b6sm280113566b.48 - gsmtp
+
+2025-12-11T15:51:35.490811100 | user@test.com | ? Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85dd1sm6057958f8f.20 - gsmtp
+
+2025-12-11T15:51:37.566812100 | user@test.com | ? Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d9c8acsm37581685e9.1 - gsmtp
+
+2025-12-11T15:51:38.675028100 | user@test.com | ? Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e838sm50901125e9.2 - gsmtp
+
+2025-12-11T15:51:39.767296 | user@test.com | ? Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85d1esm5705023f8f.26 - gsmtp
+
+2025-12-11T15:51:41.986819900 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a8be549d0sm24829465e9.1 - gsmtp
+
+2025-12-11T15:58:54.511981400 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a665e3sm5914277f8f.6 - gsmtp
+
+2025-12-11T15:58:59.655133200 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f74291sm35583175e9.11 - gsmtp
+
+2025-12-11T15:59:00.694326100 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f05cebsm13599225e9.19 - gsmtp
+
+2025-12-11T15:59:01.931811100 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b26fsm6361170f8f.40 - gsmtp
+
+2025-12-11T15:59:03.911646100 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89da4756sm38529885e9.6 - gsmtp
+
+2025-12-11T16:12:06.790628900 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f03b73sm14590865e9.4 - gsmtp
+
+2025-12-11T16:12:08.896774800 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d836c4sm15117725e9.1 - gsmtp
+
+2025-12-11T16:12:10.086886600 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85ff5sm6481144f8f.24 - gsmtp
+
+2025-12-11T16:12:11.057173800 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d04393sm38606805e9.0 - gsmtp
+
+2025-12-11T16:12:14.241095300 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f94b31sm37745735e9.15 - gsmtp
+
+2025-12-11T16:13:47.868772100 | user@test.com | ? Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a6fd62sm6403189f8f.10 - gsmtp
+
+2025-12-11T16:13:51.253693 | user@test.com | ? Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ef95e1sm37764475e9.9 - gsmtp
+
+2025-12-11T16:13:52.247031500 | user@test.com | ? Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d04393sm38680765e9.0 - gsmtp
+
+2025-12-11T16:13:53.331386700 | user@test.com | ? Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b26fsm6448052f8f.40 - gsmtp
+
+2025-12-11T16:13:55.251866600 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70394sm6157503f8f.14 - gsmtp
+
+2025-12-11T16:15:02.333518500 | user@test.com | ? Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70362sm5941194f8f.12 - gsmtp
+
+2025-12-11T16:15:08.111783300 | user@test.com | ? Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66761sm5910725f8f.3 - gsmtp
+
+2025-12-11T16:15:09.068863200 | user@test.com | ? Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ec10c0sm14917505e9.4 - gsmtp
+
+2025-12-11T16:15:10.316608300 | user@test.com | ? Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ef954asm38916355e9.10 - gsmtp
+
+2025-12-11T16:15:12.675254 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b259sm5813161f8f.41 - gsmtp
+
+2025-12-11T16:18:53.794921500 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b6bfsm5792500f8f.43 - gsmtp
+
+2025-12-11T16:18:56.677113700 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f74291sm36418505e9.11 - gsmtp
+
+2025-12-11T16:18:57.887294700 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a09fbesm5812680f8f.0 - gsmtp
+
+2025-12-11T16:18:58.914457100 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e838sm53337705e9.2 - gsmtp
+
+2025-12-11T16:19:01.154328600 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f2a2fesm36742885e9.4 - gsmtp
+
+2025-12-11T17:09:38.005716300 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89da4756sm42010685e9.6 - gsmtp
+
+2025-12-11T17:09:40.190282800 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a851sm6608203f8f.29 - gsmtp
+
+2025-12-11T17:09:41.129216900 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85d1esm6093697f8f.26 - gsmtp
+
+2025-12-11T17:09:42.327482700 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a851sm6608346f8f.29 - gsmtp
+
+2025-12-11T17:09:44.374032900 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ed6813sm15957135e9.6 - gsmtp
+
+2025-12-11T17:10:43.583914900 | user@test.com | ? Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8601csm6915025f8f.22 - gsmtp
+
+2025-12-11T17:10:45.986645900 | user@test.com | ? Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a8be549d0sm30289665e9.1 - gsmtp
+
+2025-12-11T17:10:47.194694600 | user@test.com | ? Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b750sm6053006f8f.42 - gsmtp
+
+2025-12-11T17:10:48.151539300 | user@test.com | ? Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f35a31sm39890285e9.5 - gsmtp
+
+2025-12-11T17:10:50.349404700 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a665e3sm6287833f8f.6 - gsmtp
+
+2025-12-11T17:16:41.341008100 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70665sm6722865f8f.17 - gsmtp
+
+2025-12-11T17:16:43.480682900 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a97esm7522477f8f.31 - gsmtp
+
+2025-12-11T17:16:44.593858900 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a851sm6643106f8f.29 - gsmtp
+
+2025-12-11T17:16:45.813572800 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a67800sm6421019f8f.4 - gsmtp
+
+2025-12-11T17:16:47.714626800 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d9c8acsm41164835e9.1 - gsmtp
+
+2025-12-11T17:24:14.779943500 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f74291sm39339085e9.11 - gsmtp
+
+2025-12-11T17:24:18.506538200 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 38308e7fff4ca-37fbc9a3ef2sm7394931fa.8 - gsmtp
+
+2025-12-11T17:24:20.700708500 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 00721157ae682-78d69c622d9sm10206677b3.19 - gsmtp
+
+2025-12-11T17:24:22.325420600 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 2adb3069b0e04-598f2f379dfsm944818e87.9 - gsmtp
+
+2025-12-11T17:24:25.653687700 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 2adb3069b0e04-598f2f42215sm991152e87.33 - gsmtp
+
+2025-12-11T17:24:57.941309400 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66b97sm6403549f8f.7 - gsmtp
+
+2025-12-11T17:25:00.101639800 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85feasm6623268f8f.27 - gsmtp
+
+2025-12-11T17:25:01.388816 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a950sm7017406f8f.32 - gsmtp
+
+2025-12-11T17:25:02.633589200 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66b1fsm6680559f8f.9 - gsmtp
+
+2025-12-11T17:25:04.868191700 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f0eabcsm38833435e9.15 - gsmtp
+
+2025-12-11T17:26:11.422781300 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e838sm58662105e9.2 - gsmtp
+
+2025-12-11T17:26:13.851119500 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a702a1sm7001784f8f.13 - gsmtp
+
+2025-12-11T17:26:14.957968300 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b26fsm6852519f8f.40 - gsmtp
+
+2025-12-11T17:26:15.998606900 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ec10cdsm16363125e9.3 - gsmtp
+
+2025-12-11T17:26:18.311782700 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a09fbesm6148448f8f.0 - gsmtp
+
+2025-12-11T17:27:00.162424300 | user@test.com | ? Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66797sm6430443f8f.2 - gsmtp
+
+2025-12-11T17:27:02.571998400 | user@test.com | ? Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a8db6c42asm1736465e9.8 - gsmtp
+
+2025-12-11T17:27:03.571007700 | user@test.com | ? Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a7044csm6838020f8f.15 - gsmtp
+
+2025-12-11T17:27:04.698731 | user@test.com | ? Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e947sm47103055e9.3 - gsmtp
+
+2025-12-11T17:27:07.101971900 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d8c3b2sm15025665e9.5 - gsmtp
+
+2025-12-11T17:28:06.886279300 | user@test.com | ? Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a8be549d0sm31333865e9.1 - gsmtp
+
+2025-12-11T17:28:09.075586800 | user@test.com | ? Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b20dsm6474887f8f.38 - gsmtp
+
+2025-12-11T17:28:10.308341800 | user@test.com | ? Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a6671asm6877848f8f.1 - gsmtp
+
+2025-12-11T17:28:11.532921500 | user@test.com | ? Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f7e70bsm43364025e9.12 - gsmtp
+
+2025-12-11T17:28:13.415387100 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a741c9sm6792781f8f.19 - gsmtp
+
+2025-12-11T17:28:47.222266300 | user@test.com | ? Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a8be549d0sm31374985e9.1 - gsmtp
+
+2025-12-11T17:28:49.476628800 | user@test.com | ? Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d70acfsm15183665e9.4 - gsmtp
+
+2025-12-11T17:28:50.496068500 | user@test.com | ? Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a665e3sm6370568f8f.6 - gsmtp
+
+2025-12-11T17:28:51.619282900 | user@test.com | ? Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d70b58sm16588825e9.1 - gsmtp
+
+2025-12-11T17:28:53.964602300 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70394sm6534598f8f.14 - gsmtp
+
+2025-12-11T17:30:09.907770300 | user@test.com | ? Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89da3ed7sm40549505e9.4 - gsmtp
+
+2025-12-11T17:30:13.394772800 | user@test.com | ? Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ef954asm42449985e9.10 - gsmtp
+
+2025-12-11T17:30:14.577641900 | user@test.com | ? Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f35ae6sm39111845e9.6 - gsmtp
+
+2025-12-11T17:30:16.068897300 | user@test.com | ? Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ed7a55sm15650715e9.11 - gsmtp
+
+2025-12-11T17:30:18.209670 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89da4756sm42968855e9.6 - gsmtp
+
+2025-12-11T17:32:17.098327700 | user@test.com | ? Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a67832sm6151148f8f.8 - gsmtp
+
+2025-12-11T17:32:20.566654900 | user@test.com | ? Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f74291sm39699495e9.11 - gsmtp
+
+2025-12-11T17:32:21.506598400 | user@test.com | ? Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70973sm6538125f8f.18 - gsmtp
+
+2025-12-11T17:32:22.577234400 | user@test.com | ? Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a702a1sm7036452f8f.13 - gsmtp
+
+2025-12-11T17:32:24.556155900 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e838sm59117605e9.2 - gsmtp
+
+2025-12-11T17:54:37.764254900 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b259sm6283113f8f.41 - gsmtp
+
+2025-12-11T17:55:17.114336800 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66761sm6379600f8f.3 - gsmtp
+
+2025-12-11T17:55:36.672614900 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b1f1sm6356932f8f.39 - gsmtp
+
+2025-12-11T17:55:56.207812900 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e838sm60823385e9.2 - gsmtp
+
+2025-12-11T17:56:35.281569900 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85feasm6774402f8f.27 - gsmtp
+
+2025-12-11T21:51:55.874374300 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8601csm8462525f8f.22 - gsmtp
+
+2025-12-11T21:51:56.908599400 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ef954asm53727475e9.10 - gsmtp
+
+2025-12-11T21:51:57.637209200 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a6fd62sm8093695f8f.10 - gsmtp
+
+2025-12-11T21:51:58.303960600 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e838sm76181755e9.2 - gsmtp
+
+2025-12-11T21:51:58.962060 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a67800sm7739933f8f.4 - gsmtp
+
+2025-12-11T21:51:59.663709500 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d0e3e5sm18907895e9.0 - gsmtp
+
+2025-12-11T21:52:00.326883200 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70973sm7774289f8f.18 - gsmtp
+
+2025-12-11T21:55:11.135707200 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8601csm8475986f8f.22 - gsmtp
+
+2025-12-11T21:55:11.830124200 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b259sm7369865f8f.41 - gsmtp
+
+2025-12-11T21:55:12.548803900 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66b97sm7685475f8f.7 - gsmtp
+
+2025-12-11T21:55:13.245673900 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85f81sm8419207f8f.21 - gsmtp
+
+2025-12-11T21:55:13.907061 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f2a2fesm50095515e9.4 - gsmtp
+
+2025-12-11T21:55:14.578656400 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85d1esm7404879f8f.26 - gsmtp
+
+2025-12-11T21:55:15.232380700 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d1149dsm23217545e9.0 - gsmtp
+
+2025-12-11T21:55:35.712144300 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85fcesm8177803f8f.25 - gsmtp
+
+2025-12-11T21:55:36.363324600 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70973sm7788469f8f.18 - gsmtp
+
+2025-12-11T21:55:37.094276400 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ef9768sm55575865e9.11 - gsmtp
+
+2025-12-11T21:55:38.031687300 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a841sm7972746f8f.30 - gsmtp
+
+2025-12-11T21:55:38.979445600 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89da3ed7sm51337465e9.4 - gsmtp
+
+2025-12-11T21:55:39.614813700 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f74291sm50442565e9.11 - gsmtp
+
+2025-12-11T21:55:40.279828700 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d9c8acsm52458395e9.1 - gsmtp
+
+2025-12-11T22:02:28.749322700 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85f38sm7624701f8f.28 - gsmtp
+
+2025-12-11T22:02:29.405287200 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a950sm8425120f8f.32 - gsmtp
+
+2025-12-11T22:02:30.079227900 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d9c8acsm52704655e9.1 - gsmtp
+
+2025-12-11T22:02:30.723888600 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70379sm7957650f8f.11 - gsmtp
+
+2025-12-11T22:02:31.417966400 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a941sm7529118f8f.34 - gsmtp
+
+2025-12-11T22:02:32.555465600 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b750sm7327113f8f.42 - gsmtp
+
+2025-12-11T22:02:33.772568900 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f2a2fesm50348675e9.4 - gsmtp
+
+2025-12-11T22:18:53.355062500 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f742a4sm51672455e9.10 - gsmtp
+
+2025-12-11T22:18:54.064924900 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a8db6c42asm14568495e9.8 - gsmtp
+
+2025-12-11T22:18:54.734897600 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a67832sm7408562f8f.8 - gsmtp
+
+2025-12-11T22:18:55.396342300 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b96c70sm7525689f8f.37 - gsmtp
+
+2025-12-11T22:18:56.061158700 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e947sm61179715e9.3 - gsmtp
+
+2025-12-11T22:18:56.730284300 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66b97sm7779240f8f.7 - gsmtp
+
+2025-12-11T22:18:57.411243700 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a7044csm8351801f8f.15 - gsmtp
+
+2025-12-11T22:38:52.035568400 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89dab141sm52540715e9.7 - gsmtp
+
+2025-12-11T22:38:52.681241400 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89da3a7dsm56416405e9.5 - gsmtp
+
+2025-12-11T22:38:53.316034 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70379sm8119776f8f.11 - gsmtp
+
+2025-12-11T22:38:53.943025500 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66b1fsm8199706f8f.9 - gsmtp
+
+2025-12-11T22:38:54.617816500 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a9efsm8225015f8f.33 - gsmtp
+
+2025-12-11T22:38:55.290119400 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70362sm7729713f8f.12 - gsmtp
+
+2025-12-11T22:38:55.994769400 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66b1fsm8199816f8f.9 - gsmtp
+
+2025-12-11T22:45:02.324149500 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a950sm8617826f8f.32 - gsmtp
+
+2025-12-11T22:45:03.027469 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d8c3b2sm19364035e9.5 - gsmtp
+
+2025-12-11T22:45:03.728863300 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89eee866sm19344795e9.15 - gsmtp
+
+2025-12-11T22:45:04.379564800 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d9a174sm56260005e9.3 - gsmtp
+
+2025-12-11T22:45:05.027699100 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a702a1sm8618860f8f.13 - gsmtp
+
+2025-12-11T22:45:05.659709200 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a9efsm8252574f8f.33 - gsmtp
+
+2025-12-11T22:45:06.302251200 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a9b9sm8252238f8f.35 - gsmtp
+
+2025-12-11T22:50:15.107407700 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85fcesm8418177f8f.25 - gsmtp
+
+2025-12-11T22:50:15.800894300 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1eb60sm20654295e9.20 - gsmtp
+
+2025-12-11T22:50:16.504494600 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f2cbf6sm20634805e9.5 - gsmtp
+
+2025-12-11T22:50:17.232254300 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8601csm8716840f8f.22 - gsmtp
+
+2025-12-11T22:50:17.888326800 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66614sm7842061f8f.5 - gsmtp
+
+2025-12-11T22:50:18.654483100 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d8e680sm19585975e9.6 - gsmtp
+
+2025-12-11T22:50:19.433420900 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f8c145sm52590015e9.14 - gsmtp
+
+2025-12-11T22:59:28.988493500 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ef954asm56295715e9.10 - gsmtp
+
+2025-12-11T22:59:29.660296500 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b750sm7552434f8f.42 - gsmtp
+
+2025-12-11T22:59:30.296574900 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a67800sm8018269f8f.4 - gsmtp
+
+2025-12-11T22:59:30.957540300 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f8c145sm52909775e9.14 - gsmtp
+
+2025-12-11T22:59:31.607027 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89dac074sm52207815e9.8 - gsmtp
+
+2025-12-11T22:59:32.383824100 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f742a4sm53244555e9.10 - gsmtp
+
+2025-12-11T22:59:33.104566300 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a950sm8687870f8f.32 - gsmtp
+
+2025-12-11T23:11:09.635995900 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e947sm63372205e9.3 - gsmtp
+
+2025-12-11T23:11:10.323073400 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f94b31sm55023515e9.15 - gsmtp
+
+2025-12-11T23:11:11.005011300 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a66b1fsm8343192f8f.9 - gsmtp
+
+2025-12-11T23:11:11.640334900 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70379sm8282298f8f.11 - gsmtp
+
+2025-12-11T23:11:12.286149700 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f35a31sm54532965e9.5 - gsmtp
+
+2025-12-11T23:11:12.921546400 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e838sm80486055e9.2 - gsmtp
+
+2025-12-11T23:11:13.572905700 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d1149dsm24244625e9.0 - gsmtp
+
+2025-12-11T23:11:27.177757900 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a67800sm8070723f8f.4 - gsmtp
+
+2025-12-11T23:11:27.866388700 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f036a9sm57016195e9.12 - gsmtp
+
+2025-12-11T23:11:28.549822700 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f2a2fesm52937685e9.4 - gsmtp
+
+2025-12-11T23:11:29.206946300 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e838sm80500505e9.2 - gsmtp
+
+2025-12-11T23:11:29.905247 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ec10cdsm21452105e9.3 - gsmtp
+
+2025-12-11T23:11:30.575852400 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85f38sm7906859f8f.28 - gsmtp
+
+2025-12-11T23:11:31.273983200 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b6bfsm7631290f8f.43 - gsmtp
+
+2025-12-11T23:15:42.663293200 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fb0fc8d5fsm793631f8f.2 - gsmtp
+
+2025-12-11T23:15:43.332096100 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a9b9sm8396119f8f.35 - gsmtp
+
+2025-12-11T23:15:43.985445400 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ec10c0sm21266605e9.4 - gsmtp
+
+2025-12-11T23:15:44.608712100 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ef954asm56895725e9.10 - gsmtp
+
+2025-12-11T23:15:45.267084 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a9b9sm8396254f8f.35 - gsmtp
+
+2025-12-11T23:15:45.973971600 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89dab141sm53855005e9.7 - gsmtp
+
+2025-12-11T23:15:46.616912100 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85d1esm7726425f8f.26 - gsmtp
+
+2025-12-11T23:17:50.360950600 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f1e838sm80829215e9.2 - gsmtp
+
+2025-12-11T23:17:51.048995300 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ef9768sm59004255e9.11 - gsmtp
+
+2025-12-11T23:17:51.673788300 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70394sm8219559f8f.14 - gsmtp
+
+2025-12-11T23:17:52.347714400 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89dac074sm52867255e9.8 - gsmtp
+
+2025-12-11T23:17:53.005714 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b9b6bfsm7653820f8f.43 - gsmtp
+
+2025-12-11T23:17:53.652076100 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a665e3sm7994798f8f.6 - gsmtp
+
+2025-12-11T23:17:54.284877100 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a9efsm8410597f8f.33 - gsmtp
+
+2025-12-11T23:20:47.962863500 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f0e42asm53806855e9.14 - gsmtp
+
+2025-12-11T23:20:49.073336400 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89ef954asm57087285e9.10 - gsmtp
+
+2025-12-11T23:20:50.158498900 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a6671asm8636233f8f.1 - gsmtp
+
+2025-12-11T23:20:50.847605100 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d9c8acsm55669385e9.1 - gsmtp
+
+2025-12-11T23:20:51.491992500 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d0e34fsm22157655e9.0 - gsmtp
+
+2025-12-11T23:20:52.119502100 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d9a174sm57565705e9.3 - gsmtp
+
+2025-12-11T23:20:52.848101100 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f742a4sm54041175e9.10 - gsmtp
+
+2025-12-11T23:20:55.394165200 | fail@test.com | Fail Subject | FAILED: Simulated failure
+2025-12-11T23:20:55.419492100 | receiver@test.com | Test Subject | SUCCESS
+2025-12-11T23:20:55.429492600 | receiver@test.com | HTML Subject | SUCCESS
+2025-12-11T23:22:01.067365800 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85fb9sm8773065f8f.23 - gsmtp
+
+2025-12-11T23:22:01.750646200 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a941sm7856930f8f.34 - gsmtp
+
+2025-12-11T23:22:02.380018100 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89d04393sm55790695e9.0 - gsmtp
+
+2025-12-11T23:22:03.021832800 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a97esm9433538f8f.31 - gsmtp
+
+2025-12-11T23:22:03.650837400 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a841sm8348854f8f.30 - gsmtp
+
+2025-12-11T23:22:04.295825300 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70665sm8400016f8f.17 - gsmtp
+
+2025-12-11T23:22:04.953818100 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b8a851sm8258975f8f.29 - gsmtp
+
+2025-12-11T23:22:07.539481500 | fail@test.com | Fail Subject | FAILED: Simulated failure
+2025-12-11T23:22:07.561412900 | receiver@test.com | Test Subject | SUCCESS
+2025-12-11T23:22:07.570718300 | receiver@test.com | HTML Subject | SUCCESS
+2025-12-11T23:27:37.912820700 | user@test.com | ✅ Payment Received: 50.0 NIS | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85dd1sm8236079f8f.20 - gsmtp
+
+2025-12-11T23:27:38.637026800 | user@test.com | ⚠️ Overdue Fine: 100.0 NIS for Late Book | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a702a1sm8813614f8f.13 - gsmtp
+
+2025-12-11T23:27:39.300259200 | user@test.com | 📚 Borrowing Confirmation: Java 101 | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8a70394sm8268989f8f.14 - gsmtp
+
+2025-12-11T23:27:39.950032300 | user@test.com | 🎉 Welcome to Library System, Alice! | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89da4014sm19855095e9.8 - gsmtp
+
+2025-12-11T23:27:40.584787400 | user@test.com | 📚 Library Overdue Items Reminder | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85dd1sm8236267f8f.20 - gsmtp
+
+2025-12-11T23:27:41.243279400 | user@test.com | HTML Test | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-47a89f0eabcsm53168795e9.15 - gsmtp
+
+2025-12-11T23:27:41.911609700 | user@test.com | Test Subject | FAILED: 535-5.7.8 Username and Password not accepted. For more information, go to
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-42fa8b85f81sm8843138f8f.21 - gsmtp
+
+2025-12-11T23:27:44.991281600 | fail@test.com | Fail Subject | FAILED: Simulated failure
+2025-12-11T23:27:45.016915300 | receiver@test.com | Test Subject | SUCCESS
+2025-12-11T23:27:45.027187800 | receiver@test.com | HTML Subject | SUCCESS

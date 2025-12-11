@@ -1,0 +1,2 @@
+Book,The Great Gatsby,test.user@example.com,2025-01-01,2025-01-15
+CD,Thriller,jane@example.com,2025-01-10,2025-01-24

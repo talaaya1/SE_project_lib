@@ -1,0 +1,12 @@
+tala@gmail.com,Tala,2025-12-05,10.0,PAYMENT
+tala@gmail.com,Tala,2025-12-05,5.0,PAYMENT
+tala@gmail.com,Tala,2025-12-05,10.0
+tala@gmail.com,Tala,2025-12-05,5.0
+tala@gmail.com,Tala,2025-12-05,5.0
+tala.muammar@gmail.com,talaa,2025-12-06,40.0
+tala.muammar@gmail.com,talaa,2025-12-06,40.0
+tala.muammar@gmail.com,talaa,2025-12-06,60.0
+tala.muammar@gmail.com,talaa,2025-12-06,60.0
+tala.muammar@gmail.com,talaa,2025-12-06,30.0
+tala.muammar@gmail.com,talaa,2025-12-06,30.0
+tala@gmail.com,Tala,2025-12-06,20.0

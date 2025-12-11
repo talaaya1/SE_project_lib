@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Media.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">new_testsoft2</a> &gt; <a href="index.source.html" class="el_package">com.library</a> &gt; <span class="el_source">Media.java</span></div><h1>Media.java</h1><pre class="source lang-java linenums">package com.library;
+
+import java.time.LocalDate;
+
+public abstract class Media {
+    protected String title;
+<span class="fc" id="L7">    protected boolean borrowed = false;</span>
+    protected LocalDate borrowDate;
+    protected LocalDate dueDate;
+    protected String borrowerEmail;
+    protected int totalCopies;
+    protected int availableCopies;
+
+<span class="fc" id="L14">    public Media(String title) {</span>
+<span class="fc" id="L15">        this.title = title;</span>
+<span class="fc" id="L16">        this.totalCopies = 1;</span>
+<span class="fc" id="L17">        this.availableCopies = 1;</span>
+<span class="fc" id="L18">    }</span>
+
+<span class="fc" id="L20">    public Media(String title, int totalCopies) {</span>
+<span class="fc" id="L21">        this.title = title;</span>
+<span class="fc" id="L22">        this.totalCopies = totalCopies;</span>
+<span class="fc" id="L23">        this.availableCopies = totalCopies;</span>
+<span class="fc" id="L24">    }</span>
+
+<span class="fc" id="L26">    public String getTitle() { return title; }</span>
+<span class="fc" id="L27">    public boolean isBorrowed() { return borrowed; }</span>
+<span class="fc" id="L28">    public void setBorrowed(boolean borrowed) { this.borrowed = borrowed; }</span>
+<span class="fc" id="L29">    public LocalDate getBorrowDate() { return borrowDate; }</span>
+<span class="fc" id="L30">    public void setBorrowDate(LocalDate borrowDate) { this.borrowDate = borrowDate; }</span>
+<span class="fc" id="L31">    public LocalDate getDueDate() { return dueDate; }</span>
+<span class="fc" id="L32">    public void setDueDate(LocalDate dueDate) { this.dueDate = dueDate; }</span>
+<span class="fc" id="L33">    public String getBorrowerEmail() { return borrowerEmail; }</span>
+<span class="fc" id="L34">    public void setBorrowerEmail(String borrowerEmail) { this.borrowerEmail = borrowerEmail; }</span>
+<span class="fc" id="L35">    public int getTotalCopies() { return totalCopies; }</span>
+<span class="fc" id="L36">    public int getAvailableCopies() { return availableCopies; }</span>
+
+    public abstract String getType();
+    public abstract int getBorrowDays();
+    public abstract boolean borrow(String userEmail);
+    public abstract void returned();
+
+    public boolean isOverdue() {
+<span class="fc bfc" id="L44" title="All 4 branches covered.">        return dueDate != null &amp;&amp; LocalDate.now().isAfter(dueDate);</span>
+    }
+
+    public long getOverdueDays() {
+<span class="fc bfc" id="L48" title="All 2 branches covered.">        if (!isOverdue()) return 0;</span>
+<span class="fc" id="L49">        return java.time.temporal.ChronoUnit.DAYS.between(dueDate, LocalDate.now());</span>
+    }
+
+    // ==== تعديل عدد النسخ ====
+    public void increaseAvailableCopies() {
+<span class="fc bfc" id="L54" title="All 2 branches covered.">        if (availableCopies &lt; totalCopies) {</span>
+<span class="fc" id="L55">            availableCopies++;</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">            if (availableCopies == totalCopies) {</span>
+<span class="fc" id="L57">                borrowed = false;</span>
+<span class="fc" id="L58">                borrowerEmail = null;</span>
+<span class="fc" id="L59">                borrowDate = null;</span>
+<span class="fc" id="L60">                dueDate = null;</span>
+            }
+        }
+<span class="fc" id="L63">    }</span>
+
+    public void decreaseAvailableCopies() {
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        if (availableCopies &gt; 0) {</span>
+<span class="fc" id="L67">            availableCopies--;</span>
+<span class="fc bfc" id="L68" title="All 2 branches covered.">            if (availableCopies == 0) {</span>
+<span class="fc" id="L69">                borrowed = true;</span>
+            }
+        }
+<span class="fc" id="L72">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

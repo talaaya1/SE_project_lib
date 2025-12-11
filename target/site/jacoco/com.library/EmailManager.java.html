@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EmailManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">new_testsoft2</a> &gt; <a href="index.source.html" class="el_package">com.library</a> &gt; <span class="el_source">EmailManager.java</span></div><h1>EmailManager.java</h1><pre class="source lang-java linenums">package com.library;
+
+import java.time.LocalDate;
+import java.util.List;
+
+public class EmailManager {
+    private final EmailSevice emailService;
+
+<span class="fc" id="L9">    public EmailManager(String email, String appPassword) {</span>
+<span class="fc" id="L10">        this.emailService = new EmailSevice(email, appPassword);</span>
+<span class="fc" id="L11">    }</span>
+
+    // ====================== method الأساسية الناقصة ======================
+    /**
+     * إرسال بريد نصي عادي
+     */
+    public boolean sendEmail(String toEmail, String subject, String body) {
+        try {
+<span class="fc" id="L19">            emailService.sendEmail(toEmail, subject, body);</span>
+<span class="fc" id="L20">            return true;</span>
+<span class="nc" id="L21">        } catch (Exception e) {</span>
+<span class="nc" id="L22">            System.err.println(&quot;❌ Failed to send email to &quot; + toEmail + &quot;: &quot; + e.getMessage());</span>
+<span class="nc" id="L23">            return false;</span>
+        }
+    }
+
+    /**
+     * إرسال بريد HTML
+     */
+    public boolean sendHtmlEmail(String toEmail, String subject, String htmlBody) {
+        try {
+<span class="fc" id="L32">            emailService.sendHtmlEmail(toEmail, subject, htmlBody);</span>
+<span class="fc" id="L33">            return true;</span>
+<span class="nc" id="L34">        } catch (Exception e) {</span>
+<span class="nc" id="L35">            System.err.println(&quot;❌ Failed to send HTML email to &quot; + toEmail + &quot;: &quot; + e.getMessage());</span>
+<span class="nc" id="L36">            return false;</span>
+        }
+    }
+    // ====================================================================
+
+    // باقي الـmethods الموجودة عندك...
+    public void sendWelcomeEmail(String toEmail, String userName) {
+<span class="fc" id="L43">        String subject = &quot;🎉 Welcome to Library System, &quot; + userName + &quot;!&quot;;</span>
+<span class="fc" id="L44">        String body =</span>
+                &quot;Dear &quot; + userName + &quot;,\n\n&quot; +
+                        &quot;Welcome to Library Management System!\n\n&quot; +
+                        &quot;Your account has been created successfully.\n&quot; +
+                        &quot;Account Details:\n&quot; +
+                        &quot;- Username: &quot; + userName + &quot;\n&quot; +
+                        &quot;- Email: &quot; + toEmail + &quot;\n&quot; +
+<span class="fc" id="L51">                        &quot;- Registration Date: &quot; + LocalDate.now() + &quot;\n\n&quot; +</span>
+                        &quot;You can now:\n&quot; +
+                        &quot;📚 Borrow books (28 days, 10 NIS/day fine)\n&quot; +
+                        &quot;💿 Borrow CDs (7 days, 20 NIS/day fine)\n&quot; +
+                        &quot;🔍 Search the library catalog\n&quot; +
+                        &quot;💰 Pay fines online\n\n&quot; +
+                        &quot;Need help? Contact library@support.com\n\n&quot; +
+                        &quot;Best regards,\n&quot; +
+                        &quot;Library Management Team\n&quot; +
+                        &quot;-----------------------------\n&quot; +
+                        &quot;This is an automated message.&quot;;
+
+<span class="fc" id="L63">        sendEmail(toEmail, subject, body);</span>
+<span class="fc" id="L64">    }</span>
+
+    public void sendBorrowConfirmation(String toEmail, String userName,
+                                       Media media, LocalDate dueDate) {
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">        String itemType = media instanceof Book ? &quot;Book&quot; : &quot;CD&quot;;</span>
+<span class="fc" id="L69">        int borrowDays = media.getBorrowDays();</span>
+<span class="pc bpc" id="L70" title="1 of 2 branches missed.">        double fineRate = media instanceof Book ? 10.0 : 20.0;</span>
+
+<span class="fc" id="L72">        String subject = &quot;📚 Borrowing Confirmation: &quot; + media.getTitle();</span>
+<span class="fc" id="L73">        String body =</span>
+                &quot;Dear &quot; + userName + &quot;,\n\n&quot; +
+                        &quot;Your borrowing request has been processed.\n\n&quot; +
+                        &quot;📋 BORROWING DETAILS:\n&quot; +
+<span class="fc" id="L77">                        &quot;Item: &quot; + media.getTitle() + &quot;\n&quot; +</span>
+                        &quot;Type: &quot; + itemType + &quot;\n&quot; +
+<span class="fc" id="L79">                        &quot;Borrow Date: &quot; + LocalDate.now() + &quot;\n&quot; +</span>
+                        &quot;Due Date: &quot; + dueDate + &quot;\n&quot; +
+                        &quot;Borrow Period: &quot; + borrowDays + &quot; days\n\n&quot; +
+                        &quot;⚠️  FINE INFORMATION:\n&quot; +
+                        &quot;Daily Fine Rate: &quot; + fineRate + &quot; NIS per day\n&quot; +
+                        &quot;Fine Starts: After &quot; + dueDate + &quot;\n\n&quot; +
+                        &quot;💡 TIPS:\n&quot; +
+                        &quot;- Return before due date to avoid fines\n&quot; +
+                        &quot;- You can view your borrowed items in your account\n&quot; +
+                        &quot;- Contact us for any issues\n\n&quot; +
+                        &quot;Best regards,\n&quot; +
+                        &quot;Library Management Team&quot;;
+
+<span class="fc" id="L92">        sendEmail(toEmail, subject, body);</span>
+<span class="fc" id="L93">    }</span>
+
+    public void sendOverdueReminder(String userEmail, String userName,
+                                    List&lt;Media&gt; overdueItems) {
+<span class="pc bpc" id="L97" title="1 of 2 branches missed.">        if (overdueItems.isEmpty()) {</span>
+<span class="nc" id="L98">            System.out.println(&quot;⚠️  No overdue items for &quot; + userName);</span>
+<span class="nc" id="L99">            return;</span>
+        }
+
+<span class="fc" id="L102">        String subject = &quot;📚 Library Overdue Items Reminder&quot;;</span>
+
+<span class="fc" id="L104">        StringBuilder message = new StringBuilder();</span>
+<span class="fc" id="L105">        message.append(&quot;Dear &quot;).append(userName).append(&quot;,\n\n&quot;);</span>
+<span class="fc" id="L106">        message.append(&quot;This is a friendly reminder that you have overdue library items.\n\n&quot;);</span>
+<span class="fc" id="L107">        message.append(&quot;Overdue Items:\n&quot;);</span>
+<span class="fc" id="L108">        message.append(&quot;===============\n&quot;);</span>
+
+<span class="fc" id="L110">        double totalFines = 0.0;</span>
+<span class="fc bfc" id="L111" title="All 2 branches covered.">        for (Media item : overdueItems) {</span>
+<span class="fc" id="L112">            long overdueDays = java.time.temporal.ChronoUnit.DAYS.between(</span>
+<span class="fc" id="L113">                    item.getDueDate(), LocalDate.now());</span>
+<span class="pc bpc" id="L114" title="1 of 2 branches missed.">            double fine = item instanceof Book ?</span>
+<span class="pc" id="L115">                    overdueDays * 10.0 : overdueDays * 20.0;</span>
+<span class="fc" id="L116">            totalFines += fine;</span>
+
+<span class="fc" id="L118">            message.append(&quot;• &quot;).append(item.getTitle())</span>
+<span class="fc" id="L119">                    .append(&quot; (&quot;).append(item.getType()).append(&quot;)\n&quot;)</span>
+<span class="fc" id="L120">                    .append(&quot;  Due Date: &quot;).append(item.getDueDate()).append(&quot;\n&quot;)</span>
+<span class="fc" id="L121">                    .append(&quot;  Days Overdue: &quot;).append(overdueDays).append(&quot;\n&quot;)</span>
+<span class="fc" id="L122">                    .append(&quot;  Fine: &quot;).append(fine).append(&quot; NIS\n\n&quot;);</span>
+<span class="fc" id="L123">        }</span>
+
+<span class="fc" id="L125">        message.append(&quot;Total Fine: &quot;).append(totalFines).append(&quot; NIS\n\n&quot;);</span>
+<span class="fc" id="L126">        message.append(&quot;Please return these items as soon as possible to avoid additional fines.\n&quot;);</span>
+<span class="fc" id="L127">        message.append(&quot;You can pay your fines at the library front desk.\n\n&quot;);</span>
+<span class="fc" id="L128">        message.append(&quot;Best regards,\nLibrary Management System&quot;);</span>
+
+<span class="fc" id="L130">        boolean sent = sendEmail(userEmail, subject, message.toString());</span>
+
+<span class="pc bpc" id="L132" title="1 of 2 branches missed.">        if (sent) {</span>
+<span class="fc" id="L133">            System.out.println(&quot;📧 Overdue reminder sent to: &quot; + userName);</span>
+        } else {
+<span class="nc" id="L135">            System.out.println(&quot;❌ Failed to send reminder to: &quot; + userName);</span>
+        }
+<span class="fc" id="L137">    }</span>
+
+    public void sendOverdueRemindersToAll(Library library) {
+<span class="nc" id="L140">        System.out.println(&quot;\n📧 SENDING OVERDUE REMINDERS...&quot;);</span>
+
+<span class="nc" id="L142">        List&lt;User&gt; allUsers = library.getAllUsers();</span>
+<span class="nc" id="L143">        int remindersSent = 0;</span>
+
+<span class="nc bnc" id="L145" title="All 2 branches missed.">        for (User user : allUsers) {</span>
+<span class="nc" id="L146">            List&lt;Media&gt; overdueItems = library.getOverdueItemsForUser(user);</span>
+
+<span class="nc bnc" id="L148" title="All 2 branches missed.">            if (!overdueItems.isEmpty()) {</span>
+<span class="nc" id="L149">                sendOverdueReminder(user.getEmail(), user.getName(), overdueItems);</span>
+<span class="nc" id="L150">                remindersSent++;</span>
+
+                try {
+<span class="nc" id="L153">                    Thread.sleep(1000);</span>
+<span class="nc" id="L154">                } catch (InterruptedException e) {</span>
+<span class="nc" id="L155">                    Thread.currentThread().interrupt();</span>
+<span class="nc" id="L156">                }</span>
+            }
+<span class="nc" id="L158">        }</span>
+
+<span class="nc" id="L160">        System.out.println(&quot;✅ Sent &quot; + remindersSent + &quot; overdue reminders&quot;);</span>
+<span class="nc" id="L161">    }</span>
+
+    public void sendPaymentReceipt(String toEmail, String userName,
+                                   double amountPaid, double remainingBalance,
+                                   String paymentMethod) {
+<span class="fc" id="L166">        String subject = &quot;✅ Payment Received: &quot; + amountPaid + &quot; NIS&quot;;</span>
+<span class="fc" id="L167">        String body =</span>
+                &quot;Dear &quot; + userName + &quot;,\n\n&quot; +
+                        &quot;Thank you for your payment!\n\n&quot; +
+                        &quot;💰 PAYMENT RECEIPT:\n&quot; +
+<span class="fc" id="L171">                        &quot;Payment Date: &quot; + LocalDate.now() + &quot;\n&quot; +</span>
+                        &quot;Amount Paid: &quot; + amountPaid + &quot; NIS\n&quot; +
+                        &quot;Payment Method: &quot; + paymentMethod + &quot;\n&quot; +
+                        &quot;Remaining Balance: &quot; + remainingBalance + &quot; NIS\n&quot; +
+<span class="fc" id="L175">                        &quot;Receipt ID: RCP-&quot; + System.currentTimeMillis() % 100000 + &quot;\n\n&quot; +</span>
+                        &quot;📝 Next Steps:\n&quot; +
+                        &quot;- Keep this email as your receipt\n&quot; +
+                        &quot;- Your borrowing privileges are restored\n&quot; +
+                        &quot;- Visit the library for any assistance\n\n&quot; +
+                        &quot;Best regards,\n&quot; +
+                        &quot;Library Management Team&quot;;
+
+<span class="fc" id="L183">        boolean sent = sendEmail(toEmail, subject, body);</span>
+<span class="pc bpc" id="L184" title="1 of 2 branches missed.">        if (sent) {</span>
+<span class="fc" id="L185">            System.out.println(&quot;✅ Payment receipt sent to: &quot; + userName);</span>
+        }
+<span class="fc" id="L187">    }</span>
+
+    public void sendFineNotification(String toEmail, String userName,
+                                     String itemTitle, double fineAmount,
+                                     long overdueDays, LocalDate dueDate) {
+<span class="fc" id="L192">        String subject = &quot;⚠️ Overdue Fine: &quot; + fineAmount + &quot; NIS for &quot; + itemTitle;</span>
+
+<span class="fc" id="L194">        String htmlBody =</span>
+                &quot;&lt;html&gt;&quot; +
+                        &quot;&lt;body style='font-family: Arial, sans-serif;'&gt;&quot; +
+                        &quot;&lt;div style='max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #ddd;'&gt;&quot; +
+                        &quot;&lt;h2 style='color: #d9534f;'&gt;⚠️ Overdue Item Fine&lt;/h2&gt;&quot; +
+                        &quot;&lt;p&gt;Dear &lt;strong&gt;&quot; + userName + &quot;&lt;/strong&gt;,&lt;/p&gt;&quot; +
+                        &quot;&lt;p&gt;You have been charged a fine for an overdue item.&lt;/p&gt;&quot; +
+                        &quot;&lt;div style='background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;'&gt;&quot; +
+                        &quot;&lt;h3&gt;📋 Fine Details:&lt;/h3&gt;&quot; +
+                        &quot;&lt;table style='width: 100%;'&gt;&quot; +
+                        &quot;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Item:&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&quot; + itemTitle + &quot;&lt;/td&gt;&lt;/tr&gt;&quot; +
+                        &quot;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Due Date:&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&quot; + dueDate + &quot;&lt;/td&gt;&lt;/tr&gt;&quot; +
+                        &quot;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Overdue Days:&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&quot; + overdueDays + &quot; days&lt;/td&gt;&lt;/tr&gt;&quot; +
+                        &quot;&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Fine Amount:&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;span style='color: red; font-weight: bold;'&gt;&quot; +
+                        fineAmount + &quot; NIS&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&quot; +
+                        &quot;&lt;/table&gt;&quot; +
+                        &quot;&lt;/div&gt;&quot; +
+                        &quot;&lt;p&gt;Please pay your fine to continue borrowing items.&lt;/p&gt;&quot; +
+                        &quot;&lt;p&gt;You can pay through the library system or visit the library.&lt;/p&gt;&quot; +
+                        &quot;&lt;hr&gt;&quot; +
+                        &quot;&lt;p style='color: #666; font-size: 12px;'&gt;&quot; +
+                        &quot;This is an automated message from Library Management System.&lt;br&gt;&quot; +
+                        &quot;Please do not reply to this email.&quot; +
+                        &quot;&lt;/p&gt;&quot; +
+                        &quot;&lt;/div&gt;&quot; +
+                        &quot;&lt;/body&gt;&quot; +
+                        &quot;&lt;/html&gt;&quot;;
+
+<span class="fc" id="L222">        boolean sent = sendHtmlEmail(toEmail, subject, htmlBody);</span>
+<span class="pc bpc" id="L223" title="1 of 2 branches missed.">        if (sent) {</span>
+<span class="fc" id="L224">            System.out.println(&quot;✅ Fine notification sent to: &quot; + userName);</span>
+        } else {
+<span class="nc" id="L226">            System.out.println(&quot;❌ Failed to send fine notification to: &quot; + userName);</span>
+        }
+<span class="fc" id="L228">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

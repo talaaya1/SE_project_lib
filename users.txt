@@ -1,0 +1,2 @@
+John Doe,test.user@example.com,pass123,0.0
+Jane Smith,jane@example.com,pass456,5.5

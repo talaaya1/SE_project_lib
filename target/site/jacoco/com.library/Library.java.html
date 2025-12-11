@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Library.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">new_testsoft2</a> &gt; <a href="index.source.html" class="el_package">com.library</a> &gt; <span class="el_source">Library.java</span></div><h1>Library.java</h1><pre class="source lang-java linenums">package com.library;
+
+import java.io.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Library {
+<span class="pc" id="L10">    private List&lt;Media&gt; mediaList = new ArrayList&lt;&gt;();</span>
+<span class="pc" id="L11">    private List&lt;User&gt; users = new ArrayList&lt;&gt;();</span>
+<span class="pc" id="L12">    private List&lt;Admin&gt; admins = new ArrayList&lt;&gt;();</span>
+<span class="pc" id="L13">    private List&lt;Librarian&gt; librarians = new ArrayList&lt;&gt;(); // ← جديد</span>
+
+    private EmailManager emailManager;
+
+<span class="pc" id="L17">    private final String BOOKS_FILE = &quot;books.txt&quot;;</span>
+<span class="pc" id="L18">    private final String CDS_FILE = &quot;cds.txt&quot;;</span>
+<span class="pc" id="L19">    private final String BORROWED_FILE = &quot;borrowed.txt&quot;;</span>
+<span class="pc" id="L20">    private final String RETURNED_FILE = &quot;returned.txt&quot;;</span>
+<span class="pc" id="L21">    private final String USERS_FILE = &quot;users.txt&quot;;</span>
+<span class="pc" id="L22">    private final String ADMINS_FILE = &quot;admins.txt&quot;;</span>
+<span class="pc" id="L23">    private final String LIBRARIANS_FILE = &quot;librarians.txt&quot;;</span>
+<span class="pc" id="L24">    private final String FINES_DETAILS = &quot;fines_details.txt&quot;;</span>
+
+<span class="pc" id="L26">    private final DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE;</span>
+
+<span class="nc" id="L28">    public Library() {</span>
+<span class="nc" id="L29">        loadAdmins();</span>
+<span class="nc" id="L30">        loadLibrarians();</span>
+<span class="nc" id="L31">        loadUsers();</span>
+<span class="nc" id="L32">        loadBooks();</span>
+<span class="nc" id="L33">        loadCDs();</span>
+<span class="nc" id="L34">        loadBorrowedMedia();</span>
+<span class="nc" id="L35">        loadFines();</span>
+<span class="nc" id="L36">    }</span>
+
+    public List&lt;Admin&gt; getAdmins() {
+<span class="fc" id="L39">        return admins;</span>
+    }
+
+    public List&lt;User&gt; getUsers() {
+<span class="fc" id="L43">        return users;</span>
+    }
+
+    public List&lt;Media&gt; getMediaList() {
+<span class="nc" id="L47">        return mediaList;</span>
+    }
+    private void loadLibrarians() {
+<span class="nc" id="L50">        File file = new File(LIBRARIANS_FILE);</span>
+<span class="nc" id="L51">        librarians.clear();</span>
+
+<span class="nc bnc" id="L53" title="All 2 branches missed.">        if (!file.exists()) {</span>
+<span class="nc" id="L54">            createDefaultLibrarians();</span>
+<span class="nc" id="L55">            return;</span>
+        }
+
+<span class="nc" id="L58">        try (BufferedReader br = new BufferedReader(new FileReader(file))) {</span>
+            String line;
+<span class="nc bnc" id="L60" title="All 2 branches missed.">            while ((line = br.readLine()) != null) {</span>
+<span class="nc bnc" id="L61" title="All 2 branches missed.">                if (line.trim().isEmpty()) continue;</span>
+
+<span class="nc" id="L63">                Librarian librarian = Librarian.fromFileString(line);</span>
+<span class="nc bnc" id="L64" title="All 2 branches missed.">                if (librarian != null) {</span>
+<span class="nc" id="L65">                    librarians.add(librarian);</span>
+                }
+<span class="nc" id="L67">            }</span>
+<span class="nc" id="L68">            System.out.println(&quot;Loaded &quot; + librarians.size() + &quot; librarians&quot;);</span>
+
+<span class="nc" id="L70">        } catch (IOException e) {</span>
+<span class="nc" id="L71">            System.err.println(&quot;Error loading librarians: &quot; + e.getMessage());</span>
+<span class="nc" id="L72">        }</span>
+<span class="nc" id="L73">    }</span>
+
+    private void saveFinesToFile() {
+<span class="fc" id="L76">        try (FileWriter fw = new FileWriter(&quot;fines.txt&quot;)) {</span>
+<span class="fc bfc" id="L77" title="All 2 branches covered.">            for (User user : users) {</span>
+<span class="pc bpc" id="L78" title="1 of 2 branches missed.">                if (user.getTotalFines() &gt; 0) {</span>
+<span class="fc" id="L79">                    fw.write(user.getEmail() + &quot;,&quot; + user.getTotalFines() + &quot;\n&quot;);</span>
+                }
+<span class="fc" id="L81">            }</span>
+<span class="nc" id="L82">        } catch (IOException e) {</span>
+<span class="nc" id="L83">            System.err.println(&quot;Error saving fines: &quot; + e.getMessage());</span>
+<span class="fc" id="L84">        }</span>
+<span class="fc" id="L85">    }</span>
+<span class="fc" id="L86">    public Library(boolean loadFiles) {</span>
+<span class="pc bpc" id="L87" title="1 of 2 branches missed.">        if (loadFiles) {</span>
+<span class="nc" id="L88">            loadAdmins();</span>
+<span class="nc" id="L89">            loadLibrarians();</span>
+<span class="nc" id="L90">            loadUsers();</span>
+<span class="nc" id="L91">            loadBooks();</span>
+<span class="nc" id="L92">            loadCDs();</span>
+<span class="nc" id="L93">            loadBorrowedMedia();</span>
+<span class="nc" id="L94">            loadFines();</span>
+        } else {
+<span class="fc" id="L96">            admins = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L97">            users = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L98">            mediaList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L99">            librarians = new ArrayList&lt;&gt;();</span>
+        }
+<span class="fc" id="L101">    }</span>
+
+    /**
+     * تحديث ملف الغرامات مع حفظ تفاصيل كل غرامة
+     */
+    private void saveDetailedFinesToFile() {
+<span class="nc" id="L107">        try (FileWriter fw = new FileWriter(&quot;fines_details.txt&quot;, true)) {</span>
+<span class="nc" id="L108">            LocalDate today = LocalDate.now();</span>
+
+<span class="nc bnc" id="L110" title="All 2 branches missed.">            for (User user : users) {</span>
+<span class="nc bnc" id="L111" title="All 2 branches missed.">                if (user.getTotalFines() &gt; 0) {</span>
+                    // يمكن إضافة معلومات إضافية هنا
+<span class="nc" id="L113">                    String record = String.format(&quot;%s,%s,%.2f,%s\n&quot;,</span>
+<span class="nc" id="L114">                            user.getEmail(),</span>
+<span class="nc" id="L115">                            user.getName(),</span>
+<span class="nc" id="L116">                            user.getTotalFines(),</span>
+<span class="nc" id="L117">                            today.toString());</span>
+<span class="nc" id="L118">                    fw.write(record);</span>
+                }
+<span class="nc" id="L120">            }</span>
+<span class="nc" id="L121">        } catch (IOException e) {</span>
+<span class="nc" id="L122">            System.err.println(&quot;Error saving detailed fines: &quot; + e.getMessage());</span>
+<span class="nc" id="L123">        }</span>
+<span class="nc" id="L124">    }</span>
+    private void createDefaultLibrarians() {
+        // Librarian افتراضي
+<span class="nc" id="L127">        librarians.add(new Librarian(&quot;Main Librarian&quot;, &quot;librarian@library.com&quot;, &quot;1234&quot;));</span>
+<span class="nc" id="L128">        saveLibrariansToFile();</span>
+<span class="nc" id="L129">        System.out.println(&quot;✅ Created default librarian&quot;);</span>
+<span class="nc" id="L130">    }</span>
+
+    private void saveLibrariansToFile() {
+<span class="fc" id="L133">        try (FileWriter fw = new FileWriter(LIBRARIANS_FILE)) {</span>
+<span class="fc bfc" id="L134" title="All 2 branches covered.">            for (Librarian librarian : librarians) {</span>
+<span class="fc" id="L135">                fw.write(librarian.toFileString() + &quot;\n&quot;);</span>
+<span class="fc" id="L136">            }</span>
+<span class="nc" id="L137">        } catch (IOException e) {</span>
+<span class="nc" id="L138">            System.err.println(&quot;Error saving librarians: &quot; + e.getMessage());</span>
+<span class="fc" id="L139">        }</span>
+<span class="fc" id="L140">    }</span>
+
+    // ===== Authentication للـLibrarian =====
+    public Librarian authenticateLibrarian(String email, String password) {
+<span class="nc bnc" id="L144" title="All 2 branches missed.">        for (Librarian librarian : librarians) {</span>
+<span class="nc bnc" id="L145" title="All 2 branches missed.">            if (librarian.login(email, password)) {</span>
+<span class="nc" id="L146">                return librarian;</span>
+            }
+<span class="nc" id="L148">        }</span>
+<span class="nc" id="L149">        return null;</span>
+    }
+
+    public Librarian getLibrarianByEmail(String email) {
+<span class="pc bpc" id="L153" title="1 of 2 branches missed.">        for (Librarian librarian : librarians) {</span>
+<span class="pc bpc" id="L154" title="1 of 2 branches missed.">            if (librarian.getEmail().equalsIgnoreCase(email)) {</span>
+<span class="fc" id="L155">                return librarian;</span>
+            }
+<span class="nc" id="L157">        }</span>
+<span class="nc" id="L158">        return null;</span>
+    }
+
+    // ===== الدوال الخاصة بالـLibrarian =====
+    /**
+     * الكشف عن الكتب المتأخرة أكثر من 28 يوم
+     */
+    public List&lt;Media&gt; detectSeverelyOverdueBooks() {
+<span class="fc" id="L166">        List&lt;Media&gt; severelyOverdue = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L167">        LocalDate today = LocalDate.now();</span>
+
+<span class="fc bfc" id="L169" title="All 2 branches covered.">        for (Media media : mediaList) {</span>
+            // شروط الكشف:
+            // 1. تكون كتاب (Book فقط)
+            // 2. تكون مستعارة
+            // 3. تكون متأخرة أكثر من 28 يوم
+<span class="fc bfc" id="L174" title="All 2 branches covered.">            if (media instanceof Book &amp;&amp;</span>
+<span class="fc bfc" id="L175" title="All 2 branches covered.">                    media.isBorrowed() &amp;&amp;</span>
+<span class="pc bpc" id="L176" title="1 of 2 branches missed.">                    media.getDueDate() != null) {</span>
+
+<span class="fc" id="L178">                long overdueDays = java.time.temporal.ChronoUnit.DAYS.between(</span>
+<span class="fc" id="L179">                        media.getDueDate(), today);</span>
+
+<span class="pc bpc" id="L181" title="1 of 2 branches missed.">                if (overdueDays &gt; 28) {</span>
+<span class="fc" id="L182">                    severelyOverdue.add(media);</span>
+                }
+            }
+<span class="fc" id="L185">        }</span>
+
+<span class="fc" id="L187">        return severelyOverdue;</span>
+    }
+
+    /**
+     * إصدار غرامات للكتب المتأخرة أكثر من 28 يوم
+     */
+    public void issueFinesForSeverelyOverdue(Librarian librarian) {
+<span class="pc bpc" id="L194" title="2 of 4 branches missed.">        if (librarian == null || !librarian.isLoggedIn()) {</span>
+<span class="nc" id="L195">            System.out.println(&quot;❌ Access denied. Librarian login required.&quot;);</span>
+<span class="nc" id="L196">            return;</span>
+        }
+
+<span class="fc" id="L199">        List&lt;Media&gt; severelyOverdue = detectSeverelyOverdueBooks();</span>
+
+<span class="pc bpc" id="L201" title="1 of 2 branches missed.">        if (severelyOverdue.isEmpty()) {</span>
+<span class="nc" id="L202">            System.out.println(&quot;✅ No books overdue more than 28 days.&quot;);</span>
+<span class="nc" id="L203">            return;</span>
+        }
+
+<span class="fc" id="L206">        System.out.println(&quot;\n&quot; + &quot;=&quot;.repeat(70));</span>
+<span class="fc" id="L207">        System.out.println(&quot;ISSUING FINES FOR SEVERELY OVERDUE BOOKS (&gt;28 DAYS)&quot;);</span>
+<span class="fc" id="L208">        System.out.println(&quot;Found &quot; + severelyOverdue.size() + &quot; severely overdue books&quot;);</span>
+<span class="fc" id="L209">        System.out.println(&quot;=&quot;.repeat(70));</span>
+
+<span class="fc" id="L211">        double totalFines = 0.0;</span>
+<span class="fc" id="L212">        int finesIssued = 0;</span>
+
+<span class="fc bfc" id="L214" title="All 2 branches covered.">        for (Media media : severelyOverdue) {</span>
+<span class="fc" id="L215">            long overdueDays = java.time.temporal.ChronoUnit.DAYS.between(</span>
+<span class="fc" id="L216">                    media.getDueDate(), LocalDate.now());</span>
+<span class="fc" id="L217">            double fine = overdueDays * 10.0; // 10 NIS per day for books</span>
+
+            // إيجاد المستخدم وإضافة الغرامة
+<span class="fc" id="L220">            User user = getUserByEmail(media.getBorrowerEmail());</span>
+<span class="pc bpc" id="L221" title="1 of 2 branches missed.">            if (user != null) {</span>
+<span class="fc" id="L222">                user.addFine(fine);</span>
+<span class="fc" id="L223">                totalFines += fine;</span>
+<span class="fc" id="L224">                finesIssued++;</span>
+
+<span class="fc" id="L226">                System.out.printf(&quot;📕 %-30s | 👤 %-20s | ⏰ %3d days | 💰 %.2f NIS%n&quot;,</span>
+<span class="fc" id="L227">                        media.getTitle(),</span>
+<span class="fc" id="L228">                        user.getName(),</span>
+<span class="fc" id="L229">                        overdueDays,</span>
+<span class="fc" id="L230">                        fine);</span>
+
+                // إرسال إشعار الغرامة
+<span class="pc bpc" id="L233" title="1 of 2 branches missed.">                if (emailManager != null) {</span>
+<span class="nc" id="L234">                    emailManager.sendFineNotification(</span>
+<span class="nc" id="L235">                            user.getEmail(),</span>
+<span class="nc" id="L236">                            user.getName(),</span>
+<span class="nc" id="L237">                            media.getTitle(),</span>
+                            fine,
+                            overdueDays,
+<span class="nc" id="L240">                            media.getDueDate()</span>
+                    );
+                }
+            }
+<span class="fc" id="L244">        }</span>
+
+        // حفظ التغييرات
+<span class="fc" id="L247">        updateUsersFile();</span>
+<span class="fc" id="L248">        saveFinesToFile();</span>
+
+<span class="fc" id="L250">        System.out.println(&quot;\n📊 SUMMARY:&quot;);</span>
+<span class="fc" id="L251">        System.out.println(&quot;• Total fines issued: &quot; + totalFines + &quot; NIS&quot;);</span>
+<span class="fc" id="L252">        System.out.println(&quot;• Number of fines: &quot; + finesIssued);</span>
+<span class="fc" id="L253">        System.out.println(&quot;• Processed by: &quot; + librarian.getName());</span>
+<span class="fc" id="L254">        System.out.println(&quot;✅ Severe overdue fines issued successfully!&quot;);</span>
+<span class="fc" id="L255">    }</span>
+
+
+
+
+
+
+    /**
+     * عرض تقرير مفصل عن الكتب المتأخرة
+     */
+    public void showSevereOverdueReport(Librarian librarian) {
+<span class="nc bnc" id="L266" title="All 4 branches missed.">        if (librarian == null || !librarian.isLoggedIn()) {</span>
+<span class="nc" id="L267">            System.out.println(&quot;❌ Access denied. Librarian login required.&quot;);</span>
+<span class="nc" id="L268">            return;</span>
+        }
+
+<span class="nc" id="L271">        List&lt;Media&gt; severelyOverdue = detectSeverelyOverdueBooks();</span>
+
+<span class="nc" id="L273">        System.out.println(&quot;\n&quot; + &quot;=&quot;.repeat(80));</span>
+<span class="nc" id="L274">        System.out.println(&quot;SEVERE OVERDUE BOOKS REPORT (&gt;28 DAYS)&quot;);</span>
+<span class="nc" id="L275">        System.out.println(&quot;Generated by: &quot; + librarian.getName());</span>
+<span class="nc" id="L276">        System.out.println(&quot;Date: &quot; + LocalDate.now());</span>
+<span class="nc" id="L277">        System.out.println(&quot;=&quot;.repeat(80));</span>
+
+<span class="nc bnc" id="L279" title="All 2 branches missed.">        if (severelyOverdue.isEmpty()) {</span>
+<span class="nc" id="L280">            System.out.println(&quot;✅ No severely overdue books found.&quot;);</span>
+<span class="nc" id="L281">            return;</span>
+        }
+
+<span class="nc" id="L284">        System.out.printf(&quot;%-3s %-30s %-20s %-12s %-10s %-10s%n&quot;,</span>
+                &quot;No&quot;, &quot;Book Title&quot;, &quot;Borrower&quot;, &quot;Due Date&quot;, &quot;Days Late&quot;, &quot;Est. Fine&quot;);
+<span class="nc" id="L286">        System.out.println(&quot;-&quot;.repeat(80));</span>
+
+<span class="nc" id="L288">        double totalEstimatedFines = 0.0;</span>
+
+<span class="nc bnc" id="L290" title="All 2 branches missed.">        for (int i = 0; i &lt; severelyOverdue.size(); i++) {</span>
+<span class="nc" id="L291">            Media media = severelyOverdue.get(i);</span>
+<span class="nc" id="L292">            long overdueDays = java.time.temporal.ChronoUnit.DAYS.between(</span>
+<span class="nc" id="L293">                    media.getDueDate(), LocalDate.now());</span>
+<span class="nc" id="L294">            double estimatedFine = overdueDays * 10.0;</span>
+<span class="nc" id="L295">            totalEstimatedFines += estimatedFine;</span>
+
+<span class="nc" id="L297">            String borrowerName = &quot;Unknown&quot;;</span>
+<span class="nc" id="L298">            User borrower = getUserByEmail(media.getBorrowerEmail());</span>
+<span class="nc bnc" id="L299" title="All 2 branches missed.">            if (borrower != null) {</span>
+<span class="nc" id="L300">                borrowerName = borrower.getName();</span>
+            }
+
+<span class="nc" id="L303">            System.out.printf(&quot;%-3d %-30s %-20s %-12s %-10d %-10.2f%n&quot;,</span>
+<span class="nc" id="L304">                    (i + 1),</span>
+<span class="nc" id="L305">                    media.getTitle(),</span>
+                    borrowerName,
+<span class="nc" id="L307">                    media.getDueDate(),</span>
+<span class="nc" id="L308">                    overdueDays,</span>
+<span class="nc" id="L309">                    estimatedFine);</span>
+        }
+
+<span class="nc" id="L312">        System.out.println(&quot;-&quot;.repeat(80));</span>
+<span class="nc" id="L313">        System.out.printf(&quot;Total estimated fines for %d books: %.2f NIS%n&quot;,</span>
+<span class="nc" id="L314">                severelyOverdue.size(), totalEstimatedFines);</span>
+<span class="nc" id="L315">        System.out.println(&quot;=&quot;.repeat(80));</span>
+<span class="nc" id="L316">    }</span>
+
+    /**
+     * إرسال تنبيهات لجميع المستخدمين المتأخرين
+     */
+
+
+    // ===== Admin يمكنه إضافة Librarian جديد =====
+    public boolean addLibrarian(Admin admin, Librarian librarian) {
+<span class="pc bpc" id="L325" title="2 of 4 branches missed.">        if (admin == null || !admin.isLoggedIn()) {</span>
+<span class="nc" id="L326">            System.out.println(&quot;❌ Only logged-in admins can add librarians.&quot;);</span>
+<span class="nc" id="L327">            return false;</span>
+        }
+
+        // التحقق من عدم وجود نفس الإيميل
+<span class="pc bpc" id="L331" title="1 of 2 branches missed.">        for (Librarian lib : librarians) {</span>
+<span class="nc bnc" id="L332" title="All 2 branches missed.">            if (lib.getEmail().equalsIgnoreCase(librarian.getEmail())) {</span>
+<span class="nc" id="L333">                System.out.println(&quot;❌ Librarian with this email already exists.&quot;);</span>
+<span class="nc" id="L334">                return false;</span>
+            }
+<span class="nc" id="L336">        }</span>
+
+<span class="fc" id="L338">        librarians.add(librarian);</span>
+<span class="fc" id="L339">        saveLibrariansToFile();</span>
+<span class="fc" id="L340">        System.out.println(&quot;✅ Librarian added: &quot; + librarian.getName());</span>
+<span class="fc" id="L341">        return true;</span>
+    }
+    public void setEmailManager(EmailManager emailManager) {
+<span class="fc" id="L344">        this.emailManager = emailManager;</span>
+<span class="fc" id="L345">    }</span>
+
+    // ===== Admin Loading =====
+    private void loadAdmins() {
+<span class="nc" id="L349">        File file = new File(ADMINS_FILE);</span>
+
+<span class="nc" id="L351">        admins.clear(); // لمنع التكرار لو الفنكشن انطلبت أكثر من مرة</span>
+
+<span class="nc bnc" id="L353" title="All 2 branches missed.">        if (!file.exists()) {</span>
+<span class="nc" id="L354">            createDefaultAdmins();</span>
+<span class="nc" id="L355">            return;</span>
+        }
+
+<span class="nc" id="L358">        try (BufferedReader br = new BufferedReader(new FileReader(file))) {</span>
+            String line;
+
+<span class="nc bnc" id="L361" title="All 2 branches missed.">            while ((line = br.readLine()) != null) {</span>
+
+<span class="nc bnc" id="L363" title="All 2 branches missed.">                if (line.trim().isEmpty()) continue;</span>
+
+                // تقسيم السطر
+<span class="nc" id="L366">                String[] parts = line.split(&quot;,&quot;);</span>
+
+<span class="nc" id="L368">                String username = parts[0].trim();</span>
+<span class="nc" id="L369">                String email    = parts[1].trim();</span>
+<span class="nc" id="L370">                String password = parts[2].trim();</span>
+
+                // إما تخزنهم كما هم أو تعمل كائن Admin
+<span class="nc" id="L373">                admins.add(new Admin(username, email, password,true));</span>
+<span class="nc" id="L374">            }</span>
+           // for (Admin admin : admins) {
+             //   System.out.println(admin.getUsername()+&quot; &quot;+admin.getEmail()+&quot; &quot;+admin.getPasswordHash()+&quot; &quot;);
+            //}
+
+
+<span class="nc" id="L380">        } catch (IOException e) {</span>
+<span class="nc" id="L381">            System.err.println(&quot;Error loading admins: &quot; + e.getMessage());</span>
+<span class="nc" id="L382">        }</span>
+<span class="nc" id="L383">    }</span>
+
+    private void createDefaultAdmins() {
+<span class="nc" id="L386">        admins.add(new Admin(&quot;admin&quot;, &quot;admin@gmail.com&quot;, &quot;admin123&quot;));</span>
+<span class="nc" id="L387">        admins.add(new Admin(&quot;superadmin&quot;, &quot;super@gmail.com&quot;, &quot;super123&quot;));</span>
+<span class="nc" id="L388">        saveAdminsToFile();</span>
+<span class="nc" id="L389">    }</span>
+
+    private void saveAdminsToFile() {
+<span class="nc" id="L392">        try (FileWriter fw = new FileWriter(ADMINS_FILE)) {</span>
+<span class="nc bnc" id="L393" title="All 2 branches missed.">            for (Admin admin : admins) {</span>
+<span class="nc" id="L394">                fw.write(admin.toFileString() + &quot;\n&quot;);</span>
+<span class="nc" id="L395">            }</span>
+<span class="nc" id="L396">        } catch (IOException e) {</span>
+<span class="nc" id="L397">            System.err.println(&quot;Error saving admins: &quot; + e.getMessage());</span>
+<span class="nc" id="L398">        }</span>
+<span class="nc" id="L399">    }</span>
+
+    // ===== Users Loading =====
+    private void loadUsers() {
+<span class="nc" id="L403">        File file = new File(USERS_FILE);</span>
+<span class="nc bnc" id="L404" title="All 2 branches missed.">        if (!file.exists()) return;</span>
+
+<span class="nc" id="L406">        try (BufferedReader br = new BufferedReader(new FileReader(file))) {</span>
+            String line;
+<span class="nc bnc" id="L408" title="All 2 branches missed.">            while ((line = br.readLine()) != null) {</span>
+<span class="nc bnc" id="L409" title="All 2 branches missed.">                if (line.trim().isEmpty()) continue;</span>
+<span class="nc" id="L410">                User user = User.fromFileString(line);</span>
+<span class="nc bnc" id="L411" title="All 2 branches missed.">                if (user != null) {</span>
+<span class="nc" id="L412">                    users.add(user);</span>
+                }
+<span class="nc" id="L414">            }</span>
+<span class="nc" id="L415">        } catch (IOException e) {</span>
+<span class="nc" id="L416">            System.err.println(&quot;Error loading users: &quot; + e.getMessage());</span>
+<span class="nc" id="L417">        }</span>
+<span class="nc" id="L418">    }</span>
+
+    // ===== Fines Loading =====
+    private void loadFines() {
+<span class="nc" id="L422">        File file = new File(&quot;fines.txt&quot;);</span>
+<span class="nc bnc" id="L423" title="All 2 branches missed.">        if (!file.exists()) return;</span>
+
+<span class="nc" id="L425">        try (BufferedReader br = new BufferedReader(new FileReader(file))) {</span>
+            String line;
+<span class="nc bnc" id="L427" title="All 2 branches missed.">            while ((line = br.readLine()) != null) {</span>
+<span class="nc bnc" id="L428" title="All 2 branches missed.">                if (line.trim().isEmpty()) continue;</span>
+
+<span class="nc" id="L430">                String[] parts = line.split(&quot;,&quot;);</span>
+<span class="nc bnc" id="L431" title="All 2 branches missed.">                if (parts.length &gt;= 2) {</span>
+<span class="nc" id="L432">                    String identifier = parts[0].trim();</span>
+<span class="nc" id="L433">                    double fineAmount = Double.parseDouble(parts[1].trim());</span>
+
+<span class="nc" id="L435">                    User user = getUserByEmail(identifier);</span>
+<span class="nc bnc" id="L436" title="All 2 branches missed.">                    if (user == null) {</span>
+<span class="nc bnc" id="L437" title="All 2 branches missed.">                        for (User u : users) {</span>
+<span class="nc bnc" id="L438" title="All 2 branches missed.">                            if (u.getName().equalsIgnoreCase(identifier)) {</span>
+<span class="nc" id="L439">                                user = u;</span>
+<span class="nc" id="L440">                                break;</span>
+                            }
+<span class="nc" id="L442">                        }</span>
+                    }
+
+<span class="nc bnc" id="L445" title="All 2 branches missed.">                    if (user != null) {</span>
+<span class="nc" id="L446">                        user.setTotalFines(fineAmount);</span>
+                    }
+                }
+<span class="nc" id="L449">            }</span>
+<span class="nc" id="L450">        } catch (IOException e) {</span>
+<span class="nc" id="L451">            System.err.println(&quot;Error loading fines: &quot; + e.getMessage());</span>
+<span class="nc" id="L452">        } catch (NumberFormatException e) {</span>
+<span class="nc" id="L453">            System.err.println(&quot;Error parsing fines file: &quot; + e.getMessage());</span>
+<span class="nc" id="L454">        }</span>
+<span class="nc" id="L455">    }</span>
+
+    // ===== Books &amp; CDs Loading =====
+    private void loadBooks() {
+<span class="nc" id="L459">        File file = new File(BOOKS_FILE);</span>
+<span class="nc bnc" id="L460" title="All 2 branches missed.">        if (!file.exists()) return;</span>
+
+<span class="nc" id="L462">        try (BufferedReader br = new BufferedReader(new FileReader(file))) {</span>
+            String line;
+<span class="nc" id="L464">            int lineNumber = 0;</span>
+<span class="nc bnc" id="L465" title="All 2 branches missed.">            while ((line = br.readLine()) != null) {</span>
+<span class="nc" id="L466">                lineNumber++;</span>
+<span class="nc bnc" id="L467" title="All 2 branches missed.">                if (line.trim().isEmpty()) continue;</span>
+
+                try {
+<span class="nc" id="L470">                    String[] parts = line.split(&quot;,&quot;);</span>
+<span class="nc bnc" id="L471" title="All 2 branches missed.">                    if (parts.length &gt;= 3) {</span>
+<span class="nc" id="L472">                        String title = parts[0].trim();</span>
+<span class="nc" id="L473">                        String author = parts[1].trim();</span>
+<span class="nc" id="L474">                        String isbn = parts[2].trim();</span>
+<span class="nc" id="L475">                        int copies = 1;</span>
+
+<span class="nc bnc" id="L477" title="All 2 branches missed.">                        if (parts.length &gt; 3) {</span>
+                            try {
+<span class="nc" id="L479">                                copies = Integer.parseInt(parts[3].trim());</span>
+<span class="nc" id="L480">                            } catch (NumberFormatException e) {</span>
+<span class="nc" id="L481">                                copies = 1;</span>
+<span class="nc" id="L482">                            }</span>
+                        }
+
+<span class="nc" id="L485">                        mediaList.add(new Book(title, author, isbn, copies));</span>
+                    }
+<span class="nc" id="L487">                } catch (Exception e) {</span>
+<span class="nc" id="L488">                    System.err.println(&quot;Error parsing book at line &quot; + lineNumber + &quot;: &quot; + line);</span>
+<span class="nc" id="L489">                }</span>
+            }
+<span class="nc" id="L491">        } catch (IOException e) {</span>
+<span class="nc" id="L492">            System.err.println(&quot;Error loading books: &quot; + e.getMessage());</span>
+<span class="nc" id="L493">        }</span>
+<span class="nc" id="L494">    }</span>
+
+    private void loadCDs() {
+<span class="nc" id="L497">        File file = new File(CDS_FILE);</span>
+<span class="nc bnc" id="L498" title="All 2 branches missed.">        if (!file.exists()) return;</span>
+
+<span class="nc" id="L500">        try (BufferedReader br = new BufferedReader(new FileReader(file))) {</span>
+            String line;
+<span class="nc bnc" id="L502" title="All 2 branches missed.">            while ((line = br.readLine()) != null) {</span>
+<span class="nc bnc" id="L503" title="All 2 branches missed.">                if (line.trim().isEmpty()) continue;</span>
+<span class="nc" id="L504">                String[] parts = line.split(&quot;,&quot;);</span>
+<span class="nc bnc" id="L505" title="All 2 branches missed.">                if (parts.length &gt;= 2) {</span>
+<span class="nc" id="L506">                    String title = parts[0].trim();</span>
+<span class="nc" id="L507">                    String artist = parts[1].trim();</span>
+<span class="nc bnc" id="L508" title="All 2 branches missed.">                    String cdId = parts.length &gt; 2 ? parts[2].trim() : &quot;&quot;;</span>
+<span class="nc bnc" id="L509" title="All 2 branches missed.">                    int copies = parts.length &gt; 3 ? Integer.parseInt(parts[3].trim()) : 1;</span>
+<span class="nc" id="L510">                    mediaList.add(new CD(title, artist, cdId, copies));</span>
+                }
+<span class="nc" id="L512">            }</span>
+<span class="nc" id="L513">        } catch (IOException e) {</span>
+<span class="nc" id="L514">            System.err.println(&quot;Error loading CDs: &quot; + e.getMessage());</span>
+<span class="nc" id="L515">        }</span>
+<span class="nc" id="L516">    }</span>
+
+    // ===== Borrowed Media Loading =====
+    private void loadBorrowedMedia() {
+<span class="nc" id="L520">        File file = new File(BORROWED_FILE);</span>
+<span class="nc bnc" id="L521" title="All 2 branches missed.">        if (!file.exists()) return;</span>
+
+<span class="nc" id="L523">        try (BufferedReader br = new BufferedReader(new FileReader(file))) {</span>
+            String line;
+<span class="nc bnc" id="L525" title="All 2 branches missed.">            while ((line = br.readLine()) != null) {</span>
+<span class="nc bnc" id="L526" title="All 2 branches missed.">                if (line.trim().isEmpty()) continue;</span>
+<span class="nc" id="L527">                String[] parts = line.split(&quot;,&quot;);</span>
+<span class="nc bnc" id="L528" title="All 2 branches missed.">                if (parts.length &gt;= 5) {</span>
+<span class="nc" id="L529">                    String type = parts[0].trim();</span>
+<span class="nc" id="L530">                    String title = parts[1].trim();</span>
+<span class="nc" id="L531">                    String borrowerEmail = parts[2].trim();</span>
+<span class="nc" id="L532">                    LocalDate borrowDate = LocalDate.parse(parts[3].trim(), formatter);</span>
+<span class="nc" id="L533">                    LocalDate dueDate = LocalDate.parse(parts[4].trim(), formatter);</span>
+
+<span class="nc bnc" id="L535" title="All 2 branches missed.">                    for (Media media : mediaList) {</span>
+<span class="nc bnc" id="L536" title="All 4 branches missed.">                        if (media.getTitle().equals(title) &amp;&amp; media.getType().equals(type)) {</span>
+<span class="nc" id="L537">                            media.setBorrowed(true);</span>
+<span class="nc" id="L538">                            media.setBorrowerEmail(borrowerEmail);</span>
+<span class="nc" id="L539">                            media.setBorrowDate(borrowDate);</span>
+<span class="nc" id="L540">                            media.setDueDate(dueDate);</span>
+
+<span class="nc" id="L542">                            User user = getUserByEmail(borrowerEmail);</span>
+<span class="nc bnc" id="L543" title="All 2 branches missed.">                            if (user != null) {</span>
+<span class="nc" id="L544">                                user.borrowMediaRecord(media);</span>
+                            }
+                            break;
+                        }
+<span class="nc" id="L548">                    }</span>
+                }
+<span class="nc" id="L550">            }</span>
+<span class="nc" id="L551">        } catch (IOException e) {</span>
+<span class="nc" id="L552">            System.err.println(&quot;Error loading borrowed media: &quot; + e.getMessage());</span>
+<span class="nc" id="L553">        }</span>
+<span class="nc" id="L554">    }</span>
+
+    // ===== Authentication =====
+    public Admin authenticateAdmin(String email, String password) {
+<span class="fc bfc" id="L558" title="All 2 branches covered.">        for (Admin admin : admins) {</span>
+<span class="fc bfc" id="L559" title="All 2 branches covered.">            if (admin.login(email, password)) {</span>
+<span class="fc" id="L560">                return admin;</span>
+            }
+<span class="fc" id="L562">        }</span>
+<span class="fc" id="L563">        return null;</span>
+    }
+
+    public User authenticateUser(String email, String password) {
+<span class="fc bfc" id="L567" title="All 2 branches covered.">        for (User user : users) {</span>
+<span class="fc bfc" id="L568" title="All 4 branches covered.">            if (user.getEmail().equals(email) &amp;&amp; user.verifyPassword(password)) {</span>
+<span class="fc" id="L569">                return user;</span>
+            }
+<span class="fc" id="L571">        }</span>
+<span class="fc" id="L572">        return null;</span>
+    }
+
+    public User registerUser(String name, String email, String password) {
+<span class="fc bfc" id="L576" title="All 2 branches covered.">        for (User user : users) {</span>
+<span class="fc bfc" id="L577" title="All 2 branches covered.">            if (user.getEmail().equals(email)) {</span>
+<span class="fc" id="L578">                return null;</span>
+            }
+<span class="fc" id="L580">        }</span>
+
+        try {
+<span class="fc" id="L583">            User newUser = new User(name, email, password);</span>
+<span class="fc" id="L584">            users.add(newUser);</span>
+<span class="fc" id="L585">            saveUserToFile(newUser);</span>
+<span class="fc" id="L586">            return newUser;</span>
+<span class="nc" id="L587">        } catch (Exception e) {</span>
+<span class="nc" id="L588">            return null;</span>
+        }
+    }
+
+    private void saveUserToFile(User user) {
+<span class="fc" id="L593">        try (FileWriter fw = new FileWriter(USERS_FILE, true)) {</span>
+<span class="fc" id="L594">            fw.write(user.toFileString() + &quot;\n&quot;);</span>
+<span class="nc" id="L595">        } catch (IOException e) {</span>
+<span class="nc" id="L596">            System.err.println(&quot;Error saving user: &quot; + e.getMessage());</span>
+<span class="fc" id="L597">        }</span>
+<span class="fc" id="L598">    }</span>
+
+    public void updateUserPassword(User user) {
+<span class="nc" id="L601">        updateUsersFile();</span>
+<span class="nc" id="L602">    }</span>
+
+    public User getUserByEmail(String email) {
+<span class="fc bfc" id="L605" title="All 2 branches covered.">        for (User user : users) {</span>
+<span class="fc bfc" id="L606" title="All 2 branches covered.">            if (user.getEmail().equalsIgnoreCase(email)) {</span>
+<span class="fc" id="L607">                return user;</span>
+            }
+<span class="fc" id="L609">        }</span>
+<span class="fc" id="L610">        return null;</span>
+    }
+
+    public boolean unregisterUser(Admin admin, String userEmail) {
+<span class="pc bpc" id="L614" title="1 of 2 branches missed.">        if (!admin.isLoggedIn()) {</span>
+<span class="nc" id="L615">            System.out.println(&quot;❌ Only logged-in admins can unregister users.&quot;);</span>
+<span class="nc" id="L616">            return false;</span>
+        }
+
+<span class="fc" id="L619">        User user = getUserByEmail(userEmail);</span>
+<span class="fc bfc" id="L620" title="All 2 branches covered.">        if (user == null) {</span>
+<span class="fc" id="L621">            System.out.println(&quot;❌ User not found.&quot;);</span>
+<span class="fc" id="L622">            return false;</span>
+        }
+
+<span class="fc bfc" id="L625" title="All 2 branches covered.">        if (!user.getBorrowedMedia().isEmpty()) {</span>
+<span class="fc" id="L626">            System.out.println(&quot;❌ Cannot unregister user with active borrowed items.&quot;);</span>
+<span class="fc" id="L627">            return false;</span>
+        }
+
+<span class="pc bpc" id="L630" title="1 of 2 branches missed.">        if (user.getTotalFines() &gt; 0) {</span>
+<span class="nc" id="L631">            System.out.println(&quot;❌ Cannot unregister user with unpaid fines.&quot;);</span>
+<span class="nc" id="L632">            return false;</span>
+        }
+
+<span class="fc" id="L635">        users.remove(user);</span>
+<span class="fc" id="L636">        updateUsersFile();</span>
+<span class="fc" id="L637">        System.out.println(&quot;✅ User &quot; + userEmail + &quot; unregistered successfully.&quot;);</span>
+<span class="fc" id="L638">        return true;</span>
+    }
+
+    private void updateUsersFile() {
+<span class="fc" id="L642">        try (FileWriter fw = new FileWriter(USERS_FILE)) {</span>
+<span class="fc bfc" id="L643" title="All 2 branches covered.">            for (User user : users) {</span>
+<span class="fc" id="L644">                fw.write(user.toFileString() + &quot;\n&quot;);</span>
+<span class="fc" id="L645">            }</span>
+<span class="nc" id="L646">        } catch (IOException e) {</span>
+<span class="nc" id="L647">            System.err.println(&quot;Error updating users file: &quot; + e.getMessage());</span>
+<span class="fc" id="L648">        }</span>
+<span class="fc" id="L649">    }</span>
+
+    // ===== Adding Media =====
+    public boolean addBook(Admin admin, Book book) {
+<span class="pc bpc" id="L653" title="1 of 2 branches missed.">        if (!admin.isLoggedIn()) {</span>
+<span class="nc" id="L654">            System.out.println(&quot;❌ Only logged-in admins can add books.&quot;);</span>
+<span class="nc" id="L655">            return false;</span>
+        }
+
+<span class="fc" id="L658">        mediaList.add(book);</span>
+<span class="fc" id="L659">        saveBookToFile(book);</span>
+<span class="fc" id="L660">        System.out.println(&quot;✅ Book added successfully.&quot;);</span>
+<span class="fc" id="L661">        return true;</span>
+    }
+
+    private void saveBookToFile(Book book) {
+<span class="fc" id="L665">        try (FileWriter fw = new FileWriter(BOOKS_FILE, true)) {</span>
+<span class="fc" id="L666">            fw.write(book.getTitle() + &quot;,&quot; + book.getAuthor() + &quot;,&quot; +</span>
+<span class="fc" id="L667">                    book.getIsbn() + &quot;,&quot; + book.getTotalCopies() + &quot;\n&quot;);</span>
+<span class="nc" id="L668">        } catch (IOException e) {</span>
+<span class="nc" id="L669">            System.err.println(&quot;Error saving book: &quot; + e.getMessage());</span>
+<span class="fc" id="L670">        }</span>
+<span class="fc" id="L671">    }</span>
+
+    public boolean addCD(Admin admin, CD cd) {
+<span class="pc bpc" id="L674" title="1 of 2 branches missed.">        if (!admin.isLoggedIn()) {</span>
+<span class="nc" id="L675">            System.out.println(&quot;❌ Only logged-in admins can add CDs.&quot;);</span>
+<span class="nc" id="L676">            return false;</span>
+        }
+
+<span class="fc" id="L679">        mediaList.add(cd);</span>
+<span class="fc" id="L680">        saveCDToFile(cd);</span>
+<span class="fc" id="L681">        System.out.println(&quot;✅ CD added successfully.&quot;);</span>
+<span class="fc" id="L682">        return true;</span>
+    }
+
+    private void saveCDToFile(CD cd) {
+<span class="fc" id="L686">        try (FileWriter fw = new FileWriter(CDS_FILE, true)) {</span>
+<span class="fc" id="L687">            fw.write(cd.getTitle() + &quot;,&quot; + cd.getArtist() + &quot;,&quot; +</span>
+<span class="fc" id="L688">                    cd.getCdId() + &quot;,&quot; + cd.getTotalCopies() + &quot;\n&quot;);</span>
+<span class="nc" id="L689">        } catch (IOException e) {</span>
+<span class="nc" id="L690">            System.err.println(&quot;Error saving CD: &quot; + e.getMessage());</span>
+<span class="fc" id="L691">        }</span>
+<span class="fc" id="L692">    }</span>
+
+    // ===== Borrow &amp; Return Media =====
+    public boolean borrowMedia(User user, String mediaTitle) {
+<span class="fc bfc" id="L696" title="All 2 branches covered.">        if (!user.canBorrow()) {</span>
+<span class="fc" id="L697">            System.out.println(&quot;❌ Cannot borrow: You have overdue items or unpaid fines.&quot;);</span>
+<span class="fc" id="L698">            return false;</span>
+        }
+
+<span class="fc" id="L701">        Media media = findMediaByTitle(mediaTitle);</span>
+<span class="fc bfc" id="L702" title="All 2 branches covered.">        if (media == null) {</span>
+<span class="fc" id="L703">            System.out.println(&quot;❌ Media not found.&quot;);</span>
+<span class="fc" id="L704">            return false;</span>
+        }
+
+<span class="fc bfc" id="L707" title="All 2 branches covered.">        if (media.isBorrowed()) {</span>
+<span class="fc" id="L708">            System.out.println(&quot;❌ Media is already borrowed.&quot;);</span>
+<span class="fc" id="L709">            return false;</span>
+        }
+
+<span class="pc bpc" id="L712" title="1 of 2 branches missed.">        if (media.borrow(user.getEmail())) {</span>
+<span class="fc" id="L713">            user.borrowMediaRecord(media);</span>
+<span class="fc" id="L714">            saveBorrowedToFile(media);</span>
+
+            // تحديث الملفات حسب نوع المادة
+<span class="pc bpc" id="L717" title="1 of 2 branches missed.">            if (media instanceof Book) updateBooksFile();</span>
+<span class="nc bnc" id="L718" title="All 2 branches missed.">            else if (media instanceof CD) updateCDsFile();</span>
+
+<span class="fc" id="L720">            System.out.println(&quot;✅ Successfully borrowed: &quot; + mediaTitle);</span>
+<span class="fc" id="L721">            System.out.println(&quot;📅 Due date: &quot; + media.getDueDate());</span>
+<span class="fc" id="L722">            return true;</span>
+        }
+
+<span class="nc" id="L725">        return false;</span>
+    }
+
+    private Media findMediaByTitle(String title) {
+<span class="fc bfc" id="L729" title="All 2 branches covered.">        for (Media media : mediaList) {</span>
+<span class="fc bfc" id="L730" title="All 2 branches covered.">            if (media.getTitle().equalsIgnoreCase(title)) {</span>
+<span class="fc" id="L731">                return media;</span>
+            }
+<span class="fc" id="L733">        }</span>
+<span class="fc" id="L734">        return null;</span>
+    }
+
+    private void saveBorrowedToFile(Media media) {
+<span class="fc" id="L738">        try (FileWriter fw = new FileWriter(BORROWED_FILE, true)) {</span>
+<span class="fc" id="L739">            fw.write(media.getType() + &quot;,&quot; + media.getTitle() + &quot;,&quot; +</span>
+<span class="fc" id="L740">                    media.getBorrowerEmail() + &quot;,&quot; +</span>
+<span class="fc" id="L741">                    media.getBorrowDate().format(formatter) + &quot;,&quot; +</span>
+<span class="fc" id="L742">                    media.getDueDate().format(formatter) + &quot;\n&quot;);</span>
+<span class="nc" id="L743">        } catch (IOException e) {</span>
+<span class="nc" id="L744">            System.err.println(&quot;Error saving borrowed record: &quot; + e.getMessage());</span>
+<span class="fc" id="L745">        }</span>
+<span class="fc" id="L746">    }</span>
+
+    public boolean returnMedia(User user, String title, LocalDate returnDate) {
+<span class="fc bfc" id="L749" title="All 2 branches covered.">        for (Media media : mediaList) {</span>
+<span class="fc bfc" id="L750" title="All 2 branches covered.">            if (media.getTitle().equalsIgnoreCase(title.trim())</span>
+<span class="fc bfc" id="L751" title="All 2 branches covered.">                    &amp;&amp; media.isBorrowed()</span>
+<span class="pc bpc" id="L752" title="1 of 2 branches missed.">                    &amp;&amp; media.getBorrowerEmail().equals(user.getEmail())) {</span>
+
+<span class="fc" id="L754">                boolean isOverdue = returnDate.isAfter(media.getDueDate());</span>
+<span class="fc" id="L755">                long overdueDays = 0;</span>
+<span class="fc" id="L756">                double fine = 0.0;</span>
+
+<span class="pc bpc" id="L758" title="1 of 2 branches missed.">                if (isOverdue) {</span>
+<span class="nc" id="L759">                    overdueDays = java.time.temporal.ChronoUnit.DAYS.between(</span>
+<span class="nc" id="L760">                            media.getDueDate(), returnDate);</span>
+
+<span class="nc bnc" id="L762" title="All 2 branches missed.">                    fine = media instanceof Book ?</span>
+<span class="nc" id="L763">                            overdueDays * 10.0 : overdueDays * 20.0;</span>
+
+<span class="nc" id="L765">                    user.addFine(fine);</span>
+
+<span class="nc" id="L767">                    System.out.println(&quot;\n⚠️  OVERDUE RETURN DETECTED!&quot;);</span>
+<span class="nc" id="L768">                    System.out.println(&quot;   📅 Due date: &quot; + media.getDueDate());</span>
+<span class="nc" id="L769">                    System.out.println(&quot;   📅 Return date: &quot; + returnDate);</span>
+<span class="nc" id="L770">                    System.out.println(&quot;   ⏰ Days overdue: &quot; + overdueDays);</span>
+<span class="nc" id="L771">                    System.out.println(&quot;   💰 Fine applied: &quot; + fine + &quot; NIS&quot;);</span>
+<span class="nc" id="L772">                    System.out.println(&quot;   📋 Total fines now: &quot; + user.getTotalFines() + &quot; NIS&quot;);</span>
+
+<span class="nc" id="L774">                    saveFineDetails(user, media, overdueDays, fine, returnDate);</span>
+
+<span class="nc bnc" id="L776" title="All 2 branches missed.">                    if (emailManager != null) {</span>
+<span class="nc" id="L777">                        emailManager.sendFineNotification(</span>
+<span class="nc" id="L778">                                user.getEmail(),</span>
+<span class="nc" id="L779">                                user.getName(),</span>
+                                title,
+                                fine,
+                                overdueDays,
+<span class="nc" id="L783">                                media.getDueDate()</span>
+                        );
+<span class="nc" id="L785">                        System.out.println(&quot;📧 Fine notification email sent.&quot;);</span>
+                    }
+                }
+
+                // ✅ تعديل النسخ عند الإرجاع
+<span class="fc" id="L790">                media.returned();</span>
+
+                // تحديث الملفات حسب نوع المادة
+<span class="pc bpc" id="L793" title="1 of 2 branches missed.">                if (media instanceof Book) updateBooksFile();</span>
+<span class="nc bnc" id="L794" title="All 2 branches missed.">                else if (media instanceof CD) updateCDsFile();</span>
+
+<span class="fc" id="L796">                user.returnMediaRecord(media);</span>
+<span class="fc" id="L797">                updateBorrowedFile(media);</span>
+<span class="fc" id="L798">                saveReturnedToFile(media);</span>
+
+<span class="fc" id="L800">                System.out.println(&quot;✅ Successfully returned: &quot; + title);</span>
+<span class="fc" id="L801">                return true;</span>
+            }
+<span class="fc" id="L803">        }</span>
+
+<span class="fc" id="L805">        System.out.println(&quot;❌ You haven't borrowed this item: &quot; + title);</span>
+<span class="fc" id="L806">        return false;</span>
+    }
+
+    private void saveFineDetails(User user, Media media, long overdueDays,
+                                 double fine, LocalDate returnDate) {
+<span class="nc" id="L811">        try (FileWriter fw = new FileWriter(FINES_DETAILS, true)) {</span>
+<span class="nc" id="L812">            String record = String.format(&quot;%s,%s,%s,%s,%d,%.2f,%s,%s\n&quot;,</span>
+<span class="nc" id="L813">                    user.getEmail(),</span>
+<span class="nc" id="L814">                    user.getName(),</span>
+<span class="nc" id="L815">                    media.getTitle(),</span>
+<span class="nc" id="L816">                    media.getType(),</span>
+<span class="nc" id="L817">                    overdueDays,</span>
+<span class="nc" id="L818">                    fine,</span>
+<span class="nc" id="L819">                    media.getDueDate(),</span>
+                    returnDate);
+<span class="nc" id="L821">            fw.write(record);</span>
+<span class="nc" id="L822">        } catch (IOException e) {</span>
+<span class="nc" id="L823">            System.err.println(&quot;Error saving fine details: &quot; + e.getMessage());</span>
+<span class="nc" id="L824">        }</span>
+<span class="nc" id="L825">    }</span>
+
+    private void updateBorrowedFile(Media media) {
+        try {
+<span class="fc" id="L829">            File file = new File(BORROWED_FILE);</span>
+<span class="fc" id="L830">            List&lt;String&gt; lines = new ArrayList&lt;&gt;();</span>
+
+<span class="pc bpc" id="L832" title="1 of 2 branches missed.">            if (file.exists()) {</span>
+<span class="fc" id="L833">                try (BufferedReader br = new BufferedReader(new FileReader(file))) {</span>
+                    String line;
+<span class="fc bfc" id="L835" title="All 2 branches covered.">                    while ((line = br.readLine()) != null) {</span>
+<span class="pc bpc" id="L836" title="1 of 2 branches missed.">                        if (line.trim().isEmpty()) continue;</span>
+
+<span class="fc" id="L838">                        String[] parts = line.split(&quot;,&quot;);</span>
+<span class="pc bpc" id="L839" title="1 of 2 branches missed.">                        if (parts.length &gt;= 2 &amp;&amp;</span>
+<span class="fc bfc" id="L840" title="All 2 branches covered.">                                parts[1].equals(media.getTitle()) &amp;&amp;</span>
+<span class="pc bpc" id="L841" title="1 of 2 branches missed.">                                parts[0].equals(media.getType())) {</span>
+<span class="fc" id="L842">                            continue;</span>
+                        }
+<span class="fc" id="L844">                        lines.add(line);</span>
+<span class="fc" id="L845">                    }</span>
+                }
+
+<span class="fc" id="L848">                try (FileWriter fw = new FileWriter(file)) {</span>
+<span class="fc bfc" id="L849" title="All 2 branches covered.">                    for (String line : lines) {</span>
+<span class="fc" id="L850">                        fw.write(line + &quot;\n&quot;);</span>
+<span class="fc" id="L851">                    }</span>
+                }
+            }
+<span class="nc" id="L854">        } catch (IOException e) {</span>
+<span class="nc" id="L855">            System.err.println(&quot;Error updating borrowed file: &quot; + e.getMessage());</span>
+<span class="fc" id="L856">        }</span>
+<span class="fc" id="L857">    }</span>
+
+    private void saveReturnedToFile(Media media) {
+<span class="fc" id="L860">        try (FileWriter fw = new FileWriter(RETURNED_FILE, true)) {</span>
+<span class="fc" id="L861">            fw.write(media.getType() + &quot;,&quot; + media.getTitle() + &quot;,&quot; +</span>
+<span class="fc" id="L862">                    LocalDate.now().format(formatter) + &quot;\n&quot;);</span>
+<span class="nc" id="L863">        } catch (IOException e) {</span>
+<span class="nc" id="L864">            System.err.println(&quot;Error saving returned record: &quot; + e.getMessage());</span>
+<span class="fc" id="L865">        }</span>
+<span class="fc" id="L866">    }</span>
+
+    // ===== Update Books File =====
+    private void updateBooksFile() {
+<span class="fc" id="L870">        try (FileWriter fw = new FileWriter(BOOKS_FILE)) { // overwrite</span>
+<span class="fc bfc" id="L871" title="All 2 branches covered.">            for (Media media : mediaList) {</span>
+<span class="fc bfc" id="L872" title="All 2 branches covered.">                if (media instanceof Book) {</span>
+<span class="fc" id="L873">                    Book book = (Book) media;</span>
+<span class="fc" id="L874">                    fw.write(book.getTitle() + &quot;,&quot; + book.getAuthor() + &quot;,&quot; +</span>
+<span class="fc" id="L875">                            book.getIsbn() + &quot;,&quot; + book.getAvailableCopies() + &quot;\n&quot;);</span>
+                }
+<span class="fc" id="L877">            }</span>
+<span class="nc" id="L878">        } catch (IOException e) {</span>
+<span class="nc" id="L879">            System.err.println(&quot;Error updating books file: &quot; + e.getMessage());</span>
+<span class="fc" id="L880">        }</span>
+<span class="fc" id="L881">    }</span>
+
+    // ===== Update CDs File =====
+    private void updateCDsFile() {
+<span class="nc" id="L885">        try (FileWriter fw = new FileWriter(CDS_FILE)) { // overwrite</span>
+<span class="nc bnc" id="L886" title="All 2 branches missed.">            for (Media media : mediaList) {</span>
+<span class="nc bnc" id="L887" title="All 2 branches missed.">                if (media instanceof CD) {</span>
+<span class="nc" id="L888">                    CD cd = (CD) media;</span>
+<span class="nc" id="L889">                    fw.write(cd.getTitle() + &quot;,&quot; + cd.getArtist() + &quot;,&quot; +</span>
+<span class="nc" id="L890">                            cd.getCdId() + &quot;,&quot; + cd.getAvailableCopies() + &quot;\n&quot;);</span>
+                }
+<span class="nc" id="L892">            }</span>
+<span class="nc" id="L893">        } catch (IOException e) {</span>
+<span class="nc" id="L894">            System.err.println(&quot;Error updating CDs file: &quot; + e.getMessage());</span>
+<span class="nc" id="L895">        }</span>
+<span class="nc" id="L896">    }</span>
+
+    // ===== Search &amp; Get Media =====
+    public List&lt;Media&gt; searchMedia(String keyword) {
+<span class="fc" id="L900">        List&lt;Media&gt; results = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L901">        String lowerKeyword = keyword.toLowerCase();</span>
+
+<span class="fc bfc" id="L903" title="All 2 branches covered.">        for (Media media : mediaList) {</span>
+<span class="fc bfc" id="L904" title="All 2 branches covered.">            if (media.getTitle().toLowerCase().contains(lowerKeyword)) {</span>
+<span class="fc" id="L905">                results.add(media);</span>
+<span class="fc bfc" id="L906" title="All 2 branches covered.">            } else if (media instanceof Book) {</span>
+<span class="fc" id="L907">                Book book = (Book) media;</span>
+<span class="fc bfc" id="L908" title="All 2 branches covered.">                if (book.getAuthor().toLowerCase().contains(lowerKeyword) ||</span>
+<span class="pc bpc" id="L909" title="1 of 2 branches missed.">                        book.getIsbn().toLowerCase().contains(lowerKeyword)) {</span>
+<span class="fc" id="L910">                    results.add(media);</span>
+                }
+<span class="pc bpc" id="L912" title="1 of 2 branches missed.">            } else if (media instanceof CD) {</span>
+<span class="fc" id="L913">                CD cd = (CD) media;</span>
+<span class="fc bfc" id="L914" title="All 2 branches covered.">                if (cd.getArtist().toLowerCase().contains(lowerKeyword)) {</span>
+<span class="fc" id="L915">                    results.add(media);</span>
+                }
+            }
+<span class="fc" id="L918">        }</span>
+
+<span class="fc" id="L920">        return results;</span>
+    }
+
+    public List&lt;Media&gt; getAllMedia() {
+<span class="fc" id="L924">        return new ArrayList&lt;&gt;(mediaList);</span>
+    }
+
+    public List&lt;User&gt; getAllUsers() {
+<span class="fc" id="L928">        return new ArrayList&lt;&gt;(users);</span>
+    }
+
+    public List&lt;Media&gt; getOverdueMedia() {
+<span class="fc" id="L932">        List&lt;Media&gt; overdue = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L933" title="All 2 branches covered.">        for (Media media : mediaList) {</span>
+<span class="pc bpc" id="L934" title="1 of 2 branches missed.">            if (media.isOverdue()) {</span>
+<span class="nc" id="L935">                overdue.add(media);</span>
+            }
+<span class="fc" id="L937">        }</span>
+<span class="fc" id="L938">        return overdue;</span>
+    }
+
+    // ===== Get Media By Title =====
+    public Media getMediaByTitle(String title) {
+<span class="nc bnc" id="L943" title="All 2 branches missed.">        for (Media media : mediaList) {</span>
+<span class="nc bnc" id="L944" title="All 2 branches missed.">            if (media.getTitle().equalsIgnoreCase(title)) {</span>
+<span class="nc" id="L945">                return media;</span>
+            }
+<span class="nc" id="L947">        }</span>
+<span class="nc" id="L948">        return null; // إذا لم يتم العثور على المادة</span>
+    }
+
+    public void addAdmin(Admin admin) {
+        // تحقق إذا كان موجوداً
+<span class="nc bnc" id="L953" title="All 2 branches missed.">        for (Admin a : admins) {</span>
+<span class="nc bnc" id="L954" title="All 2 branches missed.">            if (a.getEmail().equals(admin.getEmail())) {</span>
+<span class="nc" id="L955">                System.out.println(&quot;⚠️  Admin already exists: &quot; + admin.getEmail());</span>
+<span class="nc" id="L956">                return;</span>
+            }
+<span class="nc" id="L958">        }</span>
+
+        // أضف Admin جديد
+<span class="nc" id="L961">        admins.add(admin);</span>
+
+        // احفظ في الملف
+<span class="nc" id="L964">        try (FileWriter fw = new FileWriter(ADMINS_FILE, true)) {</span>
+<span class="nc" id="L965">            fw.write(admin.toFileString() + &quot;\n&quot;);</span>
+<span class="nc" id="L966">            System.out.println(&quot;✅ Admin saved to file: &quot; + admin.getEmail());</span>
+<span class="nc" id="L967">        } catch (IOException e) {</span>
+<span class="nc" id="L968">            System.err.println(&quot;Error saving admin: &quot; + e.getMessage());</span>
+<span class="nc" id="L969">        }</span>
+<span class="nc" id="L970">    }</span>
+
+    public List&lt;Media&gt; getOverdueItemsForUser(User user) {
+<span class="fc" id="L973">        List&lt;Media&gt; overdueItems = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L974">        LocalDate today = LocalDate.now();</span>
+
+<span class="fc bfc" id="L976" title="All 2 branches covered.">        for (Media media : user.getBorrowedMedia()) {</span>
+<span class="pc bpc" id="L977" title="1 of 2 branches missed.">            if (today.isAfter(media.getDueDate())) {</span>
+<span class="fc" id="L978">                overdueItems.add(media);</span>
+            }
+<span class="fc" id="L980">        }</span>
+
+<span class="fc" id="L982">        return overdueItems;</span>
+    }
+
+    /**
+     * الحصول على جميع الكتب المتأخرة في النظام
+     */
+    public List&lt;Media&gt; getAllOverdueMedia() {
+<span class="fc" id="L989">        List&lt;Media&gt; allOverdue = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L990">        LocalDate today = LocalDate.now();</span>
+
+<span class="fc bfc" id="L992" title="All 2 branches covered.">        for (Media media : getAllMedia()) {</span>
+<span class="pc bpc" id="L993" title="1 of 4 branches missed.">            if (media.getBorrowerEmail() != null &amp;&amp; today.isAfter(media.getDueDate())) {</span>
+<span class="fc" id="L994">                allOverdue.add(media);</span>
+            }
+<span class="fc" id="L996">        }</span>
+
+<span class="fc" id="L998">        return allOverdue;</span>
+    }
+
+    /**
+     * إرسال تنبيهات لجميع المستخدمين المتأخرين (للأدمن)
+     */
+    public void sendOverdueReminders(Admin admin) {
+<span class="pc bpc" id="L1005" title="2 of 4 branches missed.">        if (admin == null || !admin.isLoggedIn()) {</span>
+<span class="nc" id="L1006">            System.out.println(&quot;❌ Access denied. Admin login required.&quot;);</span>
+<span class="nc" id="L1007">            return;</span>
+        }
+
+<span class="pc bpc" id="L1010" title="1 of 2 branches missed.">        if (emailManager == null) {</span>
+<span class="nc" id="L1011">            System.out.println(&quot;❌ Email service is not configured.&quot;);</span>
+<span class="nc" id="L1012">            return;</span>
+        }
+
+<span class="fc" id="L1015">        emailManager.sendOverdueRemindersToAll(this);</span>
+<span class="fc" id="L1016">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

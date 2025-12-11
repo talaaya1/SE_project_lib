@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EmailConfig.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">new_testsoft2</a> &gt; <a href="index.source.html" class="el_package">com.library</a> &gt; <span class="el_source">EmailConfig.java</span></div><h1>EmailConfig.java</h1><pre class="source lang-java linenums">package com.library;
+
+import java.io.*;
+import java.util.Properties;
+
+/**
+ * تحميل إعدادات البريد الإلكتروني
+ */
+<span class="nc" id="L9">public class EmailConfig {</span>
+<span class="fc" id="L10">    private static Properties properties = new Properties();</span>
+
+    static {
+<span class="fc" id="L13">        loadConfig();</span>
+<span class="fc" id="L14">    }</span>
+
+    private static void loadConfig() {
+<span class="fc" id="L17">        try (InputStream input = new FileInputStream(&quot;email_config.properties&quot;)) {</span>
+<span class="fc" id="L18">            properties.load(input);</span>
+<span class="fc" id="L19">            System.out.println(&quot;✅ Email configuration loaded&quot;);</span>
+<span class="nc" id="L20">        } catch (IOException e) {</span>
+<span class="nc" id="L21">            System.err.println(&quot;❌ Error loading email config: &quot; + e.getMessage());</span>
+<span class="nc" id="L22">            System.out.println(&quot;💡 Creating default config file...&quot;);</span>
+<span class="nc" id="L23">            createDefaultConfig();</span>
+<span class="fc" id="L24">        }</span>
+<span class="fc" id="L25">    }</span>
+
+    private static void createDefaultConfig() {
+<span class="fc" id="L28">        try (OutputStream output = new FileOutputStream(&quot;email_config.properties&quot;)) {</span>
+<span class="fc" id="L29">            properties.setProperty(&quot;library.email&quot;, &quot;YOUR_EMAIL_HERE@gmail.com&quot;);</span>
+<span class="fc" id="L30">            properties.setProperty(&quot;library.app.password&quot;, &quot;YOUR_APP_PASSWORD_HERE&quot;);</span>
+<span class="fc" id="L31">            properties.setProperty(&quot;library.name&quot;, &quot;Library Management System&quot;);</span>
+<span class="fc" id="L32">            properties.setProperty(&quot;smtp.host&quot;, &quot;smtp.gmail.com&quot;);</span>
+<span class="fc" id="L33">            properties.setProperty(&quot;smtp.port&quot;, &quot;587&quot;);</span>
+
+<span class="fc" id="L35">            properties.store(output, &quot;Email Configuration&quot;);</span>
+<span class="fc" id="L36">            System.out.println(&quot;📁 Created email_config.properties&quot;);</span>
+<span class="fc" id="L37">            System.out.println(&quot;⚠️  Please edit the file with your email details!&quot;);</span>
+<span class="fc" id="L38">        } catch (IOException e) {</span>
+<span class="fc" id="L39">            System.err.println(&quot;Error creating config: &quot; + e.getMessage());</span>
+<span class="fc" id="L40">        }</span>
+<span class="fc" id="L41">    }</span>
+
+    public static String getEmail() {
+<span class="fc" id="L44">        return properties.getProperty(&quot;library.email&quot;);</span>
+    }
+
+    public static String getAppPassword() {
+<span class="fc" id="L48">        return properties.getProperty(&quot;library.app.password&quot;);</span>
+    }
+
+    public static String getLibraryName() {
+<span class="fc" id="L52">        return properties.getProperty(&quot;library.name&quot;, &quot;Library Management System&quot;);</span>
+    }
+
+    public static boolean isConfigured() {
+<span class="fc" id="L56">        String email = getEmail();</span>
+<span class="fc" id="L57">        String password = getAppPassword();</span>
+<span class="fc bfc" id="L58" title="All 6 branches covered.">        return email != null &amp;&amp; !email.contains(&quot;YOUR_EMAIL_HERE&quot;) &amp;&amp;</span>
+<span class="pc bpc" id="L59" title="1 of 2 branches missed.">                password != null &amp;&amp; !password.contains(&quot;YOUR_APP_PASSWORD_HERE&quot;);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

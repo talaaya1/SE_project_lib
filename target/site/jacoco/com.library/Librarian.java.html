@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Librarian.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">new_testsoft2</a> &gt; <a href="index.source.html" class="el_package">com.library</a> &gt; <span class="el_source">Librarian.java</span></div><h1>Librarian.java</h1><pre class="source lang-java linenums">package com.library;
+
+public class Librarian {
+    private String name;
+    private String email;
+    private String passwordHash;
+    private boolean loggedIn;
+
+    // Constructor للباسوورد العادي (يتم تشفيره)
+<span class="fc" id="L10">    public Librarian(String name, String email, String password) {</span>
+<span class="fc" id="L11">        this.name = name;</span>
+<span class="fc" id="L12">        this.email = email;</span>
+<span class="fc" id="L13">        this.passwordHash = PasswordHasher.hashPassword(password);</span>
+<span class="fc" id="L14">        this.loggedIn = false;</span>
+<span class="fc" id="L15">    }</span>
+
+    // Constructor للقراءة من الملف (يأخذ هاش جاهز)
+<span class="fc" id="L18">    public Librarian(String name, String email, String passwordHash, boolean loggedIn) {</span>
+<span class="fc" id="L19">        this.name = name;</span>
+<span class="fc" id="L20">        this.email = email;</span>
+<span class="fc" id="L21">        this.passwordHash = passwordHash;</span>
+<span class="fc" id="L22">        this.loggedIn = loggedIn;</span>
+<span class="fc" id="L23">    }</span>
+
+    public boolean login(String email, String password) {
+<span class="pc bpc" id="L26" title="1 of 4 branches missed.">        if (this.email.equals(email) &amp;&amp; PasswordHasher.verifyPassword(password, this.passwordHash)) {</span>
+<span class="fc" id="L27">            this.loggedIn = true;  // ← هون بنعدل loggedIn لـtrue</span>
+<span class="fc" id="L28">            return true;</span>
+        }
+<span class="fc" id="L30">        return false;</span>
+    }
+
+    public void logout() {
+<span class="fc" id="L34">        this.loggedIn = false;</span>
+<span class="fc" id="L35">    }</span>
+
+<span class="fc" id="L37">    public String getName() { return name; }</span>
+<span class="fc" id="L38">    public String getEmail() { return email; }</span>
+<span class="fc" id="L39">    public boolean isLoggedIn() { return loggedIn; }</span>
+<span class="fc" id="L40">    public String getPasswordHash() { return passwordHash; }</span>
+
+    public String toFileString() {
+<span class="fc" id="L43">        return name + &quot;,&quot; + email + &quot;,&quot; + passwordHash + &quot;,&quot; + loggedIn;</span>
+    }
+
+    public static Librarian fromFileString(String line) {
+        try {
+<span class="fc" id="L48">            String[] parts = line.split(&quot;,&quot;);</span>
+<span class="fc bfc" id="L49" title="All 2 branches covered.">            if (parts.length &gt;= 4) {</span>
+<span class="fc" id="L50">                String name = parts[0];</span>
+<span class="fc" id="L51">                String email = parts[1];</span>
+<span class="fc" id="L52">                String passwordHash = parts[2];</span>
+<span class="fc" id="L53">                boolean loggedIn = Boolean.parseBoolean(parts[3]);</span>
+
+<span class="fc" id="L55">                return new Librarian(name, email, passwordHash, loggedIn);</span>
+            }
+<span class="fc" id="L57">        } catch (Exception e) {</span>
+<span class="fc" id="L58">            System.err.println(&quot;Error parsing librarian: &quot; + e.getMessage());</span>
+<span class="fc" id="L59">        }</span>
+<span class="fc" id="L60">        return null;</span>
+    }
+
+    public void setLoggedIn(boolean b) {
+<span class="fc" id="L64">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

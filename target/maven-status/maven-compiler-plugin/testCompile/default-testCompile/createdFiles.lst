@@ -1,0 +1,17 @@
+com\library\EmailConfigTest.class
+com\library\PasswordHasherTest.class
+com\library\LibrarianTest.class
+com\library\UserTest$TestMedia.class
+com\library\EmailManagerTest.class
+com\library\MediaTest$TestMedia2.class
+com\library\BookFineStrategyTest.class
+com\library\FineStrategyTest.class
+com\library\LibraryTest$1.class
+com\library\UserTest.class
+com\library\DebugAdminTest.class
+com\library\CDFineStrategyTest.class
+com\library\MediaTest.class
+com\library\CDTest.class
+com\library\AdminTest.class
+com\library\BookTest.class
+com\library\LibraryTest.class

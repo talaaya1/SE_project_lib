@@ -1,0 +1,18 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+new_testsoft2,com.library,Library,1393,1081,153,115,350,278,114,75,20,35
+new_testsoft2,com.library,EmailConfig,13,100,1,7,5,28,2,10,1,7
+new_testsoft2,com.library,CD,0,104,0,6,0,27,0,12,0,9
+new_testsoft2,com.library,EmailSevice,35,192,5,5,11,46,5,4,0,4
+new_testsoft2,com.library,CDFineStrategy,0,12,0,2,0,3,0,3,0,2
+new_testsoft2,com.library,Book,16,90,1,5,4,24,2,11,1,9
+new_testsoft2,com.library,EmailSevice.new Authenticator() {...},0,16,0,0,0,2,0,2,0,2
+new_testsoft2,com.library,EmailSevice.new Authenticator() {...},0,16,0,0,0,2,0,2,0,2
+new_testsoft2,com.library,BookFineStrategy,0,12,0,2,0,3,0,3,0,2
+new_testsoft2,com.library,DebugAdmin.PasswordHasher,6,56,1,5,3,8,2,4,1,2
+new_testsoft2,com.library,DebugAdmin,69,25,0,0,22,6,2,1,2,1
+new_testsoft2,com.library,Librarian,0,117,1,5,0,35,1,13,0,11
+new_testsoft2,com.library,PasswordHasher,53,137,0,4,17,27,2,5,2,3
+new_testsoft2,com.library,Admin,6,108,0,6,2,32,0,13,0,10
+new_testsoft2,com.library,EmailManager,82,261,11,9,25,63,10,9,1,8
+new_testsoft2,com.library,Media,0,135,0,14,0,38,0,24,0,17
+new_testsoft2,com.library,User,24,170,3,9,7,43,6,18,3,15

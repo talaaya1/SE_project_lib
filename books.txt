@@ -1,0 +1,3 @@
+The Great Gatsby,F. Scott Fitzgerald,1234567890,3
+1984,George Orwell,0987654321,2
+To Kill a Mockingbird,Harper Lee,1122334455,1

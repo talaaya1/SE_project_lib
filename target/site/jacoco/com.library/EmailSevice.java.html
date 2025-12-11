@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EmailSevice.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">new_testsoft2</a> &gt; <a href="index.source.html" class="el_package">com.library</a> &gt; <span class="el_source">EmailSevice.java</span></div><h1>EmailSevice.java</h1><pre class="source lang-java linenums">package com.library;
+
+import jakarta.mail.*;
+import jakarta.mail.internet.*;
+import java.util.Properties;
+
+/**
+ * خدمة البريد الإلكتروني باستخدام Jakarta Mail وSMTP
+ */
+class EmailSevice {
+<span class="fc" id="L11">    private final String host = &quot;smtp.gmail.com&quot;;</span>
+<span class="fc" id="L12">    private final int port = 587;</span>
+    private final String username;  // بريدك الإلكتروني
+    private final String password;  // App Password
+
+<span class="fc" id="L16">    public EmailSevice(String username, String password) {</span>
+<span class="fc" id="L17">        this.username = username;</span>
+<span class="fc" id="L18">        this.password = password;</span>
+<span class="fc" id="L19">    }</span>
+
+    /**
+     * إرسال بريد إلكتروني
+     */
+    public boolean sendEmail(String toEmail, String subject, String body) {
+        // التحقق من الإعدادات
+<span class="pc bpc" id="L26" title="2 of 4 branches missed.">        if (username == null || password == null ||</span>
+<span class="pc bpc" id="L27" title="2 of 4 branches missed.">                username.contains(&quot;your-email&quot;) || password.contains(&quot;your-password&quot;)) {</span>
+<span class="nc" id="L28">            System.out.println(&quot;❌ Please configure email settings first!&quot;);</span>
+<span class="nc" id="L29">            return false;</span>
+        }
+
+        // إعداد خصائص SMTP
+<span class="fc" id="L33">        Properties props = new Properties();</span>
+<span class="fc" id="L34">        props.put(&quot;mail.smtp.auth&quot;, &quot;true&quot;);</span>
+<span class="fc" id="L35">        props.put(&quot;mail.smtp.starttls.enable&quot;, &quot;true&quot;);</span>
+<span class="fc" id="L36">        props.put(&quot;mail.smtp.host&quot;, host);</span>
+<span class="fc" id="L37">        props.put(&quot;mail.smtp.port&quot;, port);</span>
+<span class="fc" id="L38">        props.put(&quot;mail.smtp.ssl.trust&quot;, host);</span>
+
+        // إنشاء الجلسة مع المصادقة
+<span class="fc" id="L41">        Session session = Session.getInstance(props,</span>
+<span class="fc" id="L42">                new jakarta.mail.Authenticator() {</span>
+                    protected PasswordAuthentication getPasswordAuthentication() {
+<span class="fc" id="L44">                        return new PasswordAuthentication(username, password);</span>
+                    }
+                });
+
+        try {
+            // إنشاء الرسالة
+<span class="fc" id="L50">            Message message = new MimeMessage(session);</span>
+<span class="fc" id="L51">            message.setFrom(new InternetAddress(username));</span>
+<span class="fc" id="L52">            message.setRecipients(Message.RecipientType.TO,</span>
+<span class="fc" id="L53">                    InternetAddress.parse(toEmail));</span>
+<span class="fc" id="L54">            message.setSubject(subject);</span>
+
+            // إضافة نص الرسالة
+<span class="fc" id="L57">            message.setText(body);</span>
+
+            // إرسال الرسالة
+<span class="nc" id="L60">            Transport.send(message);</span>
+
+<span class="nc" id="L62">            System.out.println(&quot;✅ Email sent successfully to: &quot; + toEmail);</span>
+<span class="nc" id="L63">            logEmail(toEmail, subject, true, null);</span>
+<span class="nc" id="L64">            return true;</span>
+
+<span class="fc" id="L66">        } catch (MessagingException e) {</span>
+<span class="fc" id="L67">            System.err.println(&quot;❌ Failed to send email: &quot; + e.getMessage());</span>
+<span class="fc" id="L68">            logEmail(toEmail, subject, false, e.getMessage());</span>
+<span class="fc" id="L69">            return false;</span>
+        }
+    }
+
+    /**
+     * إرسال بريد HTML
+     */
+    public boolean sendHtmlEmail(String toEmail, String subject, String htmlBody) {
+<span class="fc" id="L77">        Properties props = new Properties();</span>
+<span class="fc" id="L78">        props.put(&quot;mail.smtp.auth&quot;, &quot;true&quot;);</span>
+<span class="fc" id="L79">        props.put(&quot;mail.smtp.starttls.enable&quot;, &quot;true&quot;);</span>
+<span class="fc" id="L80">        props.put(&quot;mail.smtp.host&quot;, host);</span>
+<span class="fc" id="L81">        props.put(&quot;mail.smtp.port&quot;, port);</span>
+
+<span class="fc" id="L83">        Session session = Session.getInstance(props,</span>
+<span class="fc" id="L84">                new jakarta.mail.Authenticator() {</span>
+                    protected PasswordAuthentication getPasswordAuthentication() {
+<span class="fc" id="L86">                        return new PasswordAuthentication(username, password);</span>
+                    }
+                });
+
+        try {
+<span class="fc" id="L91">            Message message = new MimeMessage(session);</span>
+<span class="fc" id="L92">            message.setFrom(new InternetAddress(username));</span>
+<span class="fc" id="L93">            message.setRecipients(Message.RecipientType.TO,</span>
+<span class="fc" id="L94">                    InternetAddress.parse(toEmail));</span>
+<span class="fc" id="L95">            message.setSubject(subject);</span>
+            // إعداد محتوى HTML
+<span class="fc" id="L97">            message.setContent(htmlBody, &quot;text/html; charset=utf-8&quot;);</span>
+
+<span class="nc" id="L99">            Transport.send(message);</span>
+<span class="nc" id="L100">            System.out.println(&quot;✅ HTML email sent to: &quot; + toEmail);</span>
+<span class="nc" id="L101">            return true;</span>
+
+<span class="fc" id="L103">        } catch (MessagingException e) {</span>
+<span class="fc" id="L104">            System.err.println(&quot;❌ HTML email failed: &quot; + e.getMessage());</span>
+<span class="fc" id="L105">            return false;</span>
+        }
+    }
+
+    /**
+     * تسجيل محاولات الإرسال
+     */
+    private void logEmail(String toEmail, String subject, boolean success, String error) {
+        try {
+<span class="fc" id="L114">            java.io.FileWriter fw = new java.io.FileWriter(&quot;email_log.txt&quot;, true);</span>
+<span class="pc bpc" id="L115" title="1 of 2 branches missed.">            String status = success ? &quot;SUCCESS&quot; : &quot;FAILED: &quot; + error;</span>
+<span class="fc" id="L116">            fw.write(java.time.LocalDateTime.now() + &quot; | &quot; +</span>
+                    toEmail + &quot; | &quot; + subject + &quot; | &quot; + status + &quot;\n&quot;);
+<span class="fc" id="L118">            fw.close();</span>
+<span class="nc" id="L119">        } catch (java.io.IOException e) {</span>
+<span class="nc" id="L120">            System.err.println(&quot;Error logging email: &quot; + e.getMessage());</span>
+<span class="fc" id="L121">        }</span>
+<span class="fc" id="L122">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
